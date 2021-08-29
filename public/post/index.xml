@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | AndSt</title>
+    <link>https://andst.github.io/post/</link>
+      <atom:link href="https://andst.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 10 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_512x512_fill_lanczos_center_3.png</url>
+      <title>Posts</title>
+      <link>https://andst.github.io/post/</link>
+    </image>
+    
+    <item>
+      <title>My Terminal Setup</title>
+      <link>https://andst.github.io/post/terminal_setup/</link>
+      <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://andst.github.io/post/terminal_setup/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Within this post I want to talk about my terminal tooling.
+For me, the terminal is of my most important tools, probably the most important tool.
+I use it to set up my programming environments, configure everything, start programs and handle and view data.&lt;/p&gt;
+&lt;p&gt;You can find my setup on this Github Repo: &lt;a href=&#34;https://github.com/AndSt/zsh-config&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/AndSt/zsh-config&lt;/a&gt;. I also use this directory to work on remote machine. In that way I can quickly setup new systems. As I want to make it compatible with Linux and Mac I&amp;rsquo;m still not fully happy. Recommendations are welcome! Right now I have two scripts, one for each system, installing programs such as VLC, Google Chrome and performing update commands such as apt upgrade. Afterwards I use VCSH combine with myrepos to set up my system. I used &lt;a href=&#34;https://pikedom.com/managing-dot-files-with-vcsh-and-myrepo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; guide to distribute the setup in the repo mentioned above to new systems.&lt;/p&gt;
+&lt;p&gt;Most importantly I use ZSH. Using it provided me with a huge productivity boost.
+I like to keep my home directory tidy, so I use the &lt;a href=&#34;https://wiki.archlinux.org/title/XDG_Base_Directory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XDG Base Directory specification&lt;/a&gt; to structure my home directory.&lt;/p&gt;
+&lt;h2 id=&#34;python-setup&#34;&gt;Python Setup&lt;/h2&gt;
+&lt;p&gt;Since about 2.5 years Python is main programming language. On this note, I should note that I&amp;rsquo;m really happy and enjoy it to work with this language.
+Logically a big part of my setup is built for programming with Python.&lt;/p&gt;
+&lt;p&gt;I use virtualenv in combination with &lt;a href=&#34;https://virtualenvwrapper.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.&lt;/p&gt;
+&lt;p&gt;Additionally I built some scripts to work with environments. For instance I built a command called &amp;ldquo;cvenv&amp;rdquo; which creates a new environment and installs some libraries I need in all my projects.&lt;/p&gt;
+&lt;p&gt;I installed the &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it.&lt;/p&gt;
+&lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
+&lt;p&gt;After googling and adding and removing some, I ended up using these plugins:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git: Some git visualizations&lt;/li&gt;
+&lt;li&gt;zsh-autosuggestions: Suggests previous commands in light gray&lt;/li&gt;
+&lt;li&gt;virtualenvwrapper: Automatically enter python environments&lt;/li&gt;
+&lt;li&gt;autojump: Learning system to jump to different parts of the system&lt;/li&gt;
+&lt;li&gt;dotenv: If a .env file is present in a directory, it is automatically sourced&lt;/li&gt;
+&lt;li&gt;zsh-syntax-highlighting: Beautifies terminal output&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There&amp;rsquo;s really a lot of plugins. Go &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to find them.&lt;/p&gt;
+&lt;h2 id=&#34;awesome-reads&#34;&gt;Awesome reads&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/unixorn/awesome-dotfiles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Awesome Dotfiles:&lt;/a&gt; Another awesome library. If you&amp;rsquo;re interested to know more about Dotfiles, this should be a good entry point to find interesting resources.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My dive into Causal Inference and thoughts on the connection to NLP</title>
+      <link>https://andst.github.io/post/causality_nlp_opinion/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://andst.github.io/post/causality_nlp_opinion/</guid>
+      <description>&lt;p&gt;After starting my PhD I aimed to broaden my interests in machine learning.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-causal-inference&#34;&gt;What is Causal Inference?&lt;/h2&gt;
+&lt;p&gt;Within this paragraph I will give a high level view which lacks completeness and any formal correctness . The goal is to give you an intuitive idea how I see the field. Given my machine learning background, my limited exposure to the field, chances are that my introduction is not the best for everyone.
+If you leave this intro with a feeling of some questions Causal Inference aims to answer, I&amp;rsquo;d be really happy 🥳.
+Now let&amp;rsquo;s get down to business.&lt;/p&gt;
+&lt;p&gt;Causal thinking is something very natural to humans. A child easily understands the causal relationship between falling down and the pain it creates. Falling is the cause and pain is the effect.
+One goal of Causal Inference is to mathematically formalize this thinking.&lt;/p&gt;
+&lt;p&gt;There are many examples which show that the traditional statistical language, which is based on the notion of independence, is incapable to describe these relationships. A famous saying hereto is association is not causation which is described by Simpson&amp;rsquo;s Paradox. A traditional example is the UC Berkeley gender bias case. In total, the numbers showed that UCB was biased to admit more men. But a closer inspection showed that woman often applied to more competitive degrees where more people were rejected. Thus in total the trend was not that clear. The example shows that a statistical fact doesn&amp;rsquo;t describe the cause and effect of the underlying process. Here, in the language of Causal Inference - more later -, a so called confounding variable (the degree program) conflicted with standard statistics.&lt;/p&gt;
+&lt;p&gt;Now I want to give a tiny intro into the mathematical modelling. Causal Inference assumes operates on so called Strucural Causal Models (SCM), often also called Structural Equation Model (SEM), which generates a causal graph.&lt;/p&gt;
+&lt;p&gt;A SCM $C := (S, N)$ governing the random vector $X = (X1, . . . , Xd)$ is a set of structural equations: &lt;br&gt;
+$S_i: X_i \leftarrow fi(Pa(X_i), N_i)$, &lt;br&gt;
+where $Pa(Xi) ⊆ {X_1, . . . , X_d} \ {X_i}$ are called the parents of Xi, and the $N_i$ are
+independent noise random variables. We say that “$X_i$ causes $X_j$” if $X_i ∈ Pa(X_j)$. &lt;br&gt;
+We call a graph $G$ a causal graph of $X$ if it is obtained by drawing i) one node for each $X_i$,
+and ii) one edge from $X_i$ to $X_j$ if $X_i ∈ Pa(X_j)$. We assume acyclic causal graphs. &lt;br&gt;
+Definition is taken from [1]. Various abstractions, including cyclic graphs are also possible, e.g. [2].&lt;/p&gt;
+&lt;p&gt;One task is to observe SCM&amp;rsquo;s or causal graphs from observational data.
+Most of the time we assume they are given by human domain knowledge. To answer causal questions humans resort to &amp;ldquo;What if&amp;rdquo; questions, e.g. &amp;ldquo;Would it have been smarter if I had used the bike instead of the car&amp;rdquo;. This is formalized by interventions. Again we take the definition from [1]:&lt;/p&gt;
+&lt;p&gt;Consider a SEM C = (S, N). An intervention $e$ on $C$ consists of replacing one or several of its structural equations to obtain an intervened SEM $C^e=(S^e, N^e)$, with structural equations: &lt;br&gt;
+$S_i^e : X_i \leftarrow f_i^e (Pa^e(X_i^e), N_i^e)$,.&lt;br&gt;
+The variable $X_e$ is intervened if $S_i \neq S_i^e$ or $N_i \neq N_i^e$.&lt;/p&gt;
+&lt;p&gt;A hard intervention would set a value $X_i$ to a specific value, e.g. man or woman. A soft intervention would change the formula. By doing so we can answer &amp;ldquo;What if&amp;rdquo; questions.&lt;/p&gt;
+&lt;p&gt;In the end, I want to talk about Pearl&amp;rsquo;s ladder of Causal inference. I hope this gives some high level insight into the types of questions Causal Inference aims to answer.&lt;/p&gt;
+&lt;h2 id=&#34;how-did-i-learn-it&#34;&gt;How did I learn it?&lt;/h2&gt;
+&lt;p&gt;While I heard about the field and the famous saying &amp;ldquo;Causation is not equal to Correlation&amp;rdquo;, I just started diving into the topic this January. With a good friend we went through the course by Brady Neal (&lt;a href=&#34;https://www.bradyneal.com/causal-inference-course&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link to course&lt;/a&gt;). I really enjoyed learning the theory here. It establishes the philosophical thoughts and basic assumptions on the basis of easy examples. It&amp;rsquo;s important to note that the course doesn&amp;rsquo;t focus on the relation to machine learning but gives a general introduction to the topic. In my view this is necessary to get a comprehensive introduction.&lt;/p&gt;
+&lt;p&gt;TODO: compare to primer and schölkopf book.&lt;/p&gt;
+&lt;h2 id=&#34;what-connections-did-i-observe-to-nlp&#34;&gt;What connections did I observe to NLP?&lt;/h2&gt;
+&lt;p&gt;On the first sight, causal thinking is completely natural to human thinking. We make statistical and causal considerations in most of our arguments.
+#TODO good example
+But when you want to apply the theory to certain problems, often complexity rises to quickly. Most problems in causal inference assume a known causal graph. In language, every conversation can be represented by a different graph. This is an example of the complexity arising.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s different ways how Causal Inference interacts with machine learning in general. A good overview is given in  TODO: Schölkopf paper&lt;/p&gt;
+&lt;p&gt;githu causaltext link
+An idea is to use CI for model explainability. A very nice example is CausaLM&lt;/p&gt;
+&lt;h2 id=&#34;what-problems-do-i-see&#34;&gt;What problems do I see?&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Wowchemy, the website builder for Hugo</title>
+      <link>https://andst.github.io/post/getting-started/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://andst.github.io/post/getting-started/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
+&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%28%23MadeWithWowchemy%20OR%20%23MadeWithAcademic%29&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/guide/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
+&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
+&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1229 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Andreas Stephan" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Within this post I want to motivate and recap my dive into Causal Inference. I want to give a small high level introduction, mention interesting things I learnt and offer some thoughts on the connection to NLP." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://andst.github.io/post/causality_nlp_opinion/" />
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f0cf03b20998d63e314819fa4a90c13f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://andst.github.io/post/causality_nlp_opinion/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="AndSt" />
+  <meta property="og:url" content="https://andst.github.io/post/causality_nlp_opinion/" />
+  <meta property="og:title" content="My dive into Causal Inference and thoughts on the connection to NLP | AndSt" />
+  <meta property="og:description" content="Within this post I want to motivate and recap my dive into Causal Inference. I want to give a small high level introduction, mention interesting things I learnt and offer some thoughts on the connection to NLP." /><meta property="og:image" content="https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-08-04T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-08-04T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://andst.github.io/post/causality_nlp_opinion/"
+  },
+  "headline": "My dive into Causal Inference and thoughts on the connection to NLP",
+  
+  "datePublished": "2021-08-04T00:00:00Z",
+  "dateModified": "2021-08-04T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Andreas Stephan"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "AndSt",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Within this post I want to motivate and recap my dive into Causal Inference. I want to give a small high level introduction, mention interesting things I learnt and offer some thoughts on the connection to NLP."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>My dive into Causal Inference and thoughts on the connection to NLP | AndSt</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="57ad102f328badbec067adf2fe7038a9" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">AndSt</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">AndSt</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>My dive into Causal Inference and thoughts on the connection to NLP</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Andreas Stephan</span>, <span >
+      吳恩達</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Aug 4, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/post/">Post</a>, <a href="/category/opinion/">Opinion</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>After starting my PhD I aimed to broaden my interests in machine learning.</p>
+<h2 id="what-is-causal-inference">What is Causal Inference?</h2>
+<p>Within this paragraph I will give a high level view which lacks completeness and any formal correctness . The goal is to give you an intuitive idea how I see the field. Given my machine learning background, my limited exposure to the field, chances are that my introduction is not the best for everyone.
+If you leave this intro with a feeling of some questions Causal Inference aims to answer, I&rsquo;d be really happy 🥳.
+Now let&rsquo;s get down to business.</p>
+<p>Causal thinking is something very natural to humans. A child easily understands the causal relationship between falling down and the pain it creates. Falling is the cause and pain is the effect.
+One goal of Causal Inference is to mathematically formalize this thinking.</p>
+<p>There are many examples which show that the traditional statistical language, which is based on the notion of independence, is incapable to describe these relationships. A famous saying hereto is association is not causation which is described by Simpson&rsquo;s Paradox. A traditional example is the UC Berkeley gender bias case. In total, the numbers showed that UCB was biased to admit more men. But a closer inspection showed that woman often applied to more competitive degrees where more people were rejected. Thus in total the trend was not that clear. The example shows that a statistical fact doesn&rsquo;t describe the cause and effect of the underlying process. Here, in the language of Causal Inference - more later -, a so called confounding variable (the degree program) conflicted with standard statistics.</p>
+<p>Now I want to give a tiny intro into the mathematical modelling. Causal Inference assumes operates on so called Strucural Causal Models (SCM), often also called Structural Equation Model (SEM), which generates a causal graph.</p>
+<p>A SCM $C := (S, N)$ governing the random vector $X = (X1, . . . , Xd)$ is a set of structural equations: <br>
+$S_i: X_i \leftarrow fi(Pa(X_i), N_i)$, <br>
+where $Pa(Xi) ⊆ {X_1, . . . , X_d} \ {X_i}$ are called the parents of Xi, and the $N_i$ are
+independent noise random variables. We say that “$X_i$ causes $X_j$” if $X_i ∈ Pa(X_j)$. <br>
+We call a graph $G$ a causal graph of $X$ if it is obtained by drawing i) one node for each $X_i$,
+and ii) one edge from $X_i$ to $X_j$ if $X_i ∈ Pa(X_j)$. We assume acyclic causal graphs. <br>
+Definition is taken from [1]. Various abstractions, including cyclic graphs are also possible, e.g. [2].</p>
+<p>One task is to observe SCM&rsquo;s or causal graphs from observational data.
+Most of the time we assume they are given by human domain knowledge. To answer causal questions humans resort to &ldquo;What if&rdquo; questions, e.g. &ldquo;Would it have been smarter if I had used the bike instead of the car&rdquo;. This is formalized by interventions. Again we take the definition from [1]:</p>
+<p>Consider a SEM C = (S, N). An intervention $e$ on $C$ consists of replacing one or several of its structural equations to obtain an intervened SEM $C^e=(S^e, N^e)$, with structural equations: <br>
+$S_i^e : X_i \leftarrow f_i^e (Pa^e(X_i^e), N_i^e)$,.<br>
+The variable $X_e$ is intervened if $S_i \neq S_i^e$ or $N_i \neq N_i^e$.</p>
+<p>A hard intervention would set a value $X_i$ to a specific value, e.g. man or woman. A soft intervention would change the formula. By doing so we can answer &ldquo;What if&rdquo; questions.</p>
+<p>In the end, I want to talk about Pearl&rsquo;s ladder of Causal inference. I hope this gives some high level insight into the types of questions Causal Inference aims to answer.</p>
+<h2 id="how-did-i-learn-it">How did I learn it?</h2>
+<p>While I heard about the field and the famous saying &ldquo;Causation is not equal to Correlation&rdquo;, I just started diving into the topic this January. With a good friend we went through the course by Brady Neal (<a href="https://www.bradyneal.com/causal-inference-course" target="_blank" rel="noopener">Link to course</a>). I really enjoyed learning the theory here. It establishes the philosophical thoughts and basic assumptions on the basis of easy examples. It&rsquo;s important to note that the course doesn&rsquo;t focus on the relation to machine learning but gives a general introduction to the topic. In my view this is necessary to get a comprehensive introduction.</p>
+<p>TODO: compare to primer and schölkopf book.</p>
+<h2 id="what-connections-did-i-observe-to-nlp">What connections did I observe to NLP?</h2>
+<p>On the first sight, causal thinking is completely natural to human thinking. We make statistical and causal considerations in most of our arguments.
+#TODO good example
+But when you want to apply the theory to certain problems, often complexity rises to quickly. Most problems in causal inference assume a known causal graph. In language, every conversation can be represented by a different graph. This is an example of the complexity arising.</p>
+<p>There&rsquo;s different ways how Causal Inference interacts with machine learning in general. A good overview is given in  TODO: Schölkopf paper</p>
+<p>githu causaltext link
+An idea is to use CI for model explainability. A very nice example is CausaLM</p>
+<h2 id="what-problems-do-i-see">What problems do I see?</h2>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/causal-inference/">Causal Inference</a>
+  
+  <a class="badge badge-light" href="/tag/nlp/">NLP</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://andst.github.io/post/causality_nlp_opinion/&amp;text=My%20dive%20into%20Causal%20Inference%20and%20thoughts%20on%20the%20connection%20to%20NLP" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://andst.github.io/post/causality_nlp_opinion/&amp;t=My%20dive%20into%20Causal%20Inference%20and%20thoughts%20on%20the%20connection%20to%20NLP" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=My%20dive%20into%20Causal%20Inference%20and%20thoughts%20on%20the%20connection%20to%20NLP&amp;body=https://andst.github.io/post/causality_nlp_opinion/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://andst.github.io/post/causality_nlp_opinion/&amp;title=My%20dive%20into%20Causal%20Inference%20and%20thoughts%20on%20the%20connection%20to%20NLP" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=My%20dive%20into%20Causal%20Inference%20and%20thoughts%20on%20the%20connection%20to%20NLP%20https://andst.github.io/post/causality_nlp_opinion/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://andst.github.io/post/causality_nlp_opinion/&amp;title=My%20dive%20into%20Causal%20Inference%20and%20thoughts%20on%20the%20connection%20to%20NLP" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://andst.github.io"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu41d2164c28b67ac95cc8b75efe7c697d_2572784_270x270_fill_q75_lanczos_center.jpg" alt="Andreas Stephan"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://andst.github.io">Andreas Stephan</a></h5>
+      <h6 class="card-subtitle">PhD student in NLP</h6>
+      <p class="card-text">My research interests include weak supervision, causal inference and probabilistic modelling in NLP.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:andreas.stephan@univie.ac.at" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/andst_link" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/AndSt" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/andst/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
