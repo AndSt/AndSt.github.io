@@ -23,9 +23,9 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: ''
   focal_point: ""
-  placement: 2
+  placement: 3
   preview_only: false
 
 authors:
@@ -37,7 +37,7 @@ tags:
 - ZSH
 
 categories:
-- Demo
+- Programming
 ---
 
 ## Overview
@@ -54,7 +54,7 @@ I like to keep my home directory tidy, so I use the [XDG Base Directory specific
 ## Python Setup
 
 Since about 2.5 years Python is main programming language. On this note, I should note that I'm really happy and enjoy it to work with this language. 
-Logically a big part of my setup is built for programming with Python.
+Logically a big part of my setup is built for programming with Python
 
 I use virtualenv in combination with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.
 
@@ -74,8 +74,18 @@ After googling and adding and removing some, I ended up using these plugins:
 - dotenv: If a .env file is present in a directory, it is automatically sourced
 - zsh-syntax-highlighting: Beautifies terminal output
 
-There's really a lot of plugins. Go [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) to find them.
+Out there's really a lot of plugins. Check them out and pick together your favourite ones! Find them under [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins).
 
-## Awesome reads
+## Future Plans
 
+There's multiple ideas I have.<br>
+<b>Setup time:</b> At the moment it still takes me one to two hours to set up my system. It's definitely not perfect. My goal would be a a script which identifies the operating systems on it's own and installs my standard setup.
+I know that there's solutions such as Ansible. While I've not read a lot yet it feels like overengineering to use such sophisticated tool. <br />
+<b>Phone integration:</b> Currently I use Mac for private usage. While there's already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.
+
+## Resources
+
+In the end I wanna recommend some resources which helped me set up my system.
+
+- I really enjoy the videos of Luke Smith. For example, in this [video](https://www.youtube.com/watch?v=yy8RoDSdhIQ&ab_channel=LukeSmith) he shares how he keeps his home directory clean using the XDG Base Directory Specification.
 - [Awesome Dotfiles:](https://github.com/unixorn/awesome-dotfiles) Another awesome library. If you're interested to know more about Dotfiles, this should be a good entry point to find interesting resources.

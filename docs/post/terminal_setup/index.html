@@ -311,8 +311,8 @@
   <meta property="og:site_name" content="AndSt" />
   <meta property="og:url" content="https://andst.github.io/post/terminal_setup/" />
   <meta property="og:title" content="My Terminal Setup | AndSt" />
-  <meta property="og:description" content="I want to spend a few words to talk about my terminal as this is my most essential development tool besides PyCharm." /><meta property="og:image" content="https://andst.github.io/post/terminal_setup/featured.jpg" />
-    <meta property="twitter:image" content="https://andst.github.io/post/terminal_setup/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="I want to spend a few words to talk about my terminal as this is my most essential development tool besides PyCharm." /><meta property="og:image" content="https://andst.github.io/post/terminal_setup/featured.png" />
+    <meta property="twitter:image" content="https://andst.github.io/post/terminal_setup/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -349,7 +349,7 @@
   "headline": "My Terminal Setup",
   
   "image": [
-    "https://andst.github.io/post/terminal_setup/featured.jpg"
+    "https://andst.github.io/post/terminal_setup/featured.png"
   ],
   
   "datePublished": "2021-08-10T00:00:00Z",
@@ -712,8 +712,6 @@
 
   
   
-    
-  
 
 
 <div class="article-container pt-3">
@@ -769,7 +767,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/demo/">Demo</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/programming/">Programming</a></span>
   
 
 </div>
@@ -783,10 +781,10 @@
 </div>
 
 
-<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 675px;">
+<div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 1136px; max-height: 682px;">
   <div style="position: relative">
-    <img src="/post/terminal_setup/featured_hub9ee31969f44a6711206a2baf9f065b4_241861_1200x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
-    <span class="article-header-caption">Image credit: <a href="https://unsplash.com/photos/CpkOjOcXdUY"><strong>Unsplash</strong></a></span>
+    <img src="/post/terminal_setup/featured.png" alt="" class="featured-image">
+    
   </div>
 </div>
 
@@ -804,7 +802,7 @@ I use it to set up my programming environments, configure everything, start prog
 I like to keep my home directory tidy, so I use the <a href="https://wiki.archlinux.org/title/XDG_Base_Directory" target="_blank" rel="noopener">XDG Base Directory specification</a> to structure my home directory.</p>
 <h2 id="python-setup">Python Setup</h2>
 <p>Since about 2.5 years Python is main programming language. On this note, I should note that I&rsquo;m really happy and enjoy it to work with this language.
-Logically a big part of my setup is built for programming with Python.</p>
+Logically a big part of my setup is built for programming with Python</p>
 <p>I use virtualenv in combination with <a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank" rel="noopener">virtualenvwrapper</a> to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.</p>
 <p>Additionally I built some scripts to work with environments. For instance I built a command called &ldquo;cvenv&rdquo; which creates a new environment and installs some libraries I need in all my projects.</p>
 <p>I installed the <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper" target="_blank" rel="noopener">virtualenvwrapper</a> ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it.</p>
@@ -818,9 +816,16 @@ Logically a big part of my setup is built for programming with Python.</p>
 <li>dotenv: If a .env file is present in a directory, it is automatically sourced</li>
 <li>zsh-syntax-highlighting: Beautifies terminal output</li>
 </ul>
-<p>There&rsquo;s really a lot of plugins. Go <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">here</a> to find them.</p>
-<h2 id="awesome-reads">Awesome reads</h2>
+<p>Out there&rsquo;s really a lot of plugins. Check them out and pick together your favourite ones! Find them under <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="future-plans">Future Plans</h2>
+<p>There&rsquo;s multiple ideas I have.<br>
+<b>Setup time:</b> At the moment it still takes me one to two hours to set up my system. It&rsquo;s definitely not perfect. My goal would be a a script which identifies the operating systems on it&rsquo;s own and installs my standard setup.
+I know that there&rsquo;s solutions such as Ansible. While I&rsquo;ve not read a lot yet it feels like overengineering to use such sophisticated tool. <br />
+<b>Phone integration:</b> Currently I use Mac for private usage. While there&rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.</p>
+<h2 id="resources">Resources</h2>
+<p>In the end I wanna recommend some resources which helped me set up my system.</p>
 <ul>
+<li>I really enjoy the videos of Luke Smith. For example, in this <a href="https://www.youtube.com/watch?v=yy8RoDSdhIQ&amp;ab_channel=LukeSmith" target="_blank" rel="noopener">video</a> he shares how he keeps his home directory clean using the XDG Base Directory Specification.</li>
 <li><a href="https://github.com/unixorn/awesome-dotfiles" target="_blank" rel="noopener">Awesome Dotfiles:</a> Another awesome library. If you&rsquo;re interested to know more about Dotfiles, this should be a good entry point to find interesting resources.</li>
 </ul>
 

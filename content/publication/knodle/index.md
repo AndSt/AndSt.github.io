@@ -11,9 +11,9 @@ authors:
 - Benjamin Roth
 
 # Author notes (optional)
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
+#author_notes:
+#- "Equal contribution"
+#- "Equal contribution"
 
 date: "2021-08-05T00:00:00Z"
 doi: ""
@@ -58,7 +58,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
+  caption: '[Knodle.cc](http://knodle.cc)'
   focal_point: ""
   preview_only: false
 

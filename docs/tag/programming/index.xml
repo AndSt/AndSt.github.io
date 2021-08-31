@@ -26,7 +26,7 @@ I use it to set up my programming environments, configure everything, start prog
 I like to keep my home directory tidy, so I use the &lt;a href=&#34;https://wiki.archlinux.org/title/XDG_Base_Directory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XDG Base Directory specification&lt;/a&gt; to structure my home directory.&lt;/p&gt;
 &lt;h2 id=&#34;python-setup&#34;&gt;Python Setup&lt;/h2&gt;
 &lt;p&gt;Since about 2.5 years Python is main programming language. On this note, I should note that I&amp;rsquo;m really happy and enjoy it to work with this language.
-Logically a big part of my setup is built for programming with Python.&lt;/p&gt;
+Logically a big part of my setup is built for programming with Python&lt;/p&gt;
 &lt;p&gt;I use virtualenv in combination with &lt;a href=&#34;https://virtualenvwrapper.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.&lt;/p&gt;
 &lt;p&gt;Additionally I built some scripts to work with environments. For instance I built a command called &amp;ldquo;cvenv&amp;rdquo; which creates a new environment and installs some libraries I need in all my projects.&lt;/p&gt;
 &lt;p&gt;I installed the &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it.&lt;/p&gt;
@@ -40,9 +40,16 @@ Logically a big part of my setup is built for programming with Python.&lt;/p&gt;
 &lt;li&gt;dotenv: If a .env file is present in a directory, it is automatically sourced&lt;/li&gt;
 &lt;li&gt;zsh-syntax-highlighting: Beautifies terminal output&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;There&amp;rsquo;s really a lot of plugins. Go &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to find them.&lt;/p&gt;
-&lt;h2 id=&#34;awesome-reads&#34;&gt;Awesome reads&lt;/h2&gt;
+&lt;p&gt;Out there&amp;rsquo;s really a lot of plugins. Check them out and pick together your favourite ones! Find them under &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;future-plans&#34;&gt;Future Plans&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s multiple ideas I have.&lt;br&gt;
+&lt;b&gt;Setup time:&lt;/b&gt; At the moment it still takes me one to two hours to set up my system. It&amp;rsquo;s definitely not perfect. My goal would be a a script which identifies the operating systems on it&amp;rsquo;s own and installs my standard setup.
+I know that there&amp;rsquo;s solutions such as Ansible. While I&amp;rsquo;ve not read a lot yet it feels like overengineering to use such sophisticated tool. &lt;br /&gt;
+&lt;b&gt;Phone integration:&lt;/b&gt; Currently I use Mac for private usage. While there&amp;rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+&lt;p&gt;In the end I wanna recommend some resources which helped me set up my system.&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;I really enjoy the videos of Luke Smith. For example, in this &lt;a href=&#34;https://www.youtube.com/watch?v=yy8RoDSdhIQ&amp;amp;ab_channel=LukeSmith&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt; he shares how he keeps his home directory clean using the XDG Base Directory Specification.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/unixorn/awesome-dotfiles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Awesome Dotfiles:&lt;/a&gt; Another awesome library. If you&amp;rsquo;re interested to know more about Dotfiles, this should be a good entry point to find interesting resources.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
