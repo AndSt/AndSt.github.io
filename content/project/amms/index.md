@@ -1,10 +1,13 @@
 ---
 title: Another Multi Model Server (AMMS)
-summary: A package to host machine learning models from all major ML frameworks built on top of FastAPI.
+summary: A package to host machine learning models indepedent of ML frameworks built on top of FastAPI.
 tags:
 - Deep Learning
-date: "2016-04-27T00:00:00Z"
+- API
+- Project
+date: "2021-07-16T00:00:00Z"
 
+draft: true
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
@@ -13,14 +16,11 @@ image:
   focal_point: Smart
 
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/georgecushen
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
+
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -30,12 +30,67 @@ url_video: ""
 slides: example
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+// TODO: say what I learned
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+This project came to existance during a very special time. While the first wave of the Covid Pandemic hit,  the management of my company decided that we have to take a few days off during the first half of the year to have achieve a similar level of productivity throughout the year. Probably a wise choice, but still not the best time to take vacation :D As this was rather spontaneous and there wasn't really anything to do, I sat home alone and felt that I need to work on something cool. So the project was basically created within this vacation period, thus it's far from finshed. Still, I really enjoyed working on it.
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+## Motivation and Vision
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+At the time I was working as a Data Scientist. Apart from modelling, productionizing is a big part of the job. Logically I was also interested in serving the models I created. For Tensorflow, I really admired [Tensorflow Serving](https://www.tensorflow.org/tfx/serving/docker). But in practice often simple Scikit-Learn models do the trick. I realized there is no perfect unified choice so I wanted to create something similar to Tensorflow Serving (obviously not speed-wise ..).
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+So the idea was to build simple serving project which is independent of the used Python ML framework, automatically provides an API in a unified fashion, is easily Docker compatible and needs minimal effort after model creation.
+From a technical standpoint, I wanted to use FastAPI to generate the API, Docker to abstract inframstructure and a simple JSON file for configuration.
+
+Additional features I deemed important where an automatic versioning scheme and the possibility to do live model reloading. It should be possible to host a volume into the Docker container where the program automatically fetches the newest model. 
+
+If I remember correctly, [Seldon Core](https://github.com/SeldonIO/seldon-core) followed a similar goal. Now it grew and provides much bigger functionality, especially its Kubernetes integration seems cool. Giving it a quick Google search, also [BentoML](https://github.com/bentoml/BentoML) looks cool.
+
+## Design decisions
+
+The design pattern is often called Model Servers. [This](https://medium.com/@vikati/the-rise-of-the-model-servers-9395522b6c58) article gives a good overview. Basically a practitioner provides models and model server serves them, dealing with versioning, API provisioning, monitoring, etc.
+
+AMMS allows you to provide multiple models, even multiple versions of the same model. Now, I use the configuration file to explain the information AMMS needs to host a model. 
+
+````
+[
+  {
+    "model_name": "simple_text",
+    "aspired_version": "1.x",
+    "load_type": "SHARE",
+    "load_url": "data/models",
+    "servable_name": "text_input"
+  }
+]
+````
+
+This file provides all the information the loading system needs to run the code.
+Model name speficies the name in the input. The aspired version specifies the model to use. In this instance it searches in the local shared folder "data/models" for the newest model with the version "1.x". So if there'd be a model with major version 2, it wouldn't be loaded. The name of the servable 
+
+## What's working?
+
+So the project didn't finish. What did I achieve?
+
+- working
+- reload
+- docker compose
+- testing scheme
+
+Some statistics:
+- Test coverage:
+- Lines of Code:
+- No. files:
+
+## Unsolved Challenges
+
+- Reload API. It seems like routes are final
+
+## Takeaways
+
+As this project was a small interlude, it was clear this will never a productionized 
+Thus, the question is: What did I learn and take away?
+
+## Readings
+ - [FastAPI](https://fastapi.tiangolo.com/)
+ - [Docker](https://docs.docker.com/get-started/overview/)
+ - [Productionizing Awesome list](https://github.com/EthicalML/awesome-production-machine-learning)
+ - [AWS Multi-Model-Server](https://github.com/awslabs/multi-model-server)

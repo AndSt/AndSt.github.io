@@ -14,7 +14,7 @@ date: "2021-08-04T00:00:00Z"
 lastmod: "2021-08-04T00:00:00Z"
 
 # Is this an unpublished draft?
-draft: false
+draft: true
 
 # Show this page in the Featured widget?
 featured: false
@@ -40,28 +40,36 @@ categories:
 - Opinion
 ---
 
-After starting my PhD I aimed to broaden my interests in machine learning. 
+<TODO: Why this here?>
+I started my PhD in order to contribute to the goal to achieve true artificial intelligence. There are many hypothesis and directions people pursue to make steps towards this goal.
+Just to name a few, people aim for Continual Learning, Domain Adaption, Transfer Learning, System 2 theories, etc.
+
+One goal of mine was to widen my scope. 
+One field I think is particularly interesting is Causal Inference. In my view, humans often make use of probabilistic AND causal reasoning. Having a formal language combining these two seems very natural to me. 
 
 ## What is Causal Inference?
 
-Within this paragraph I will give a high level view which lacks completeness and any formal correctness . The goal is to give you an intuitive idea how I see the field. Given my machine learning background, my limited exposure to the field, chances are that my introduction is not the best for everyone.
+This paragraph gives a high level overview over Causal Inference. It lacks completeness and any formal correctness. The goal is to give you an intuitive idea of how I see the field. Given my machine learning background, my limited exposure to the field, chances are that this introduction is not the best for everyone.
 If you leave this intro with a feeling of some questions Causal Inference aims to answer, I'd be really happy :partying_face:.
-Now let's get down to business.
+Anyways, let's get down to business.
 
-Causal thinking is something very natural to humans. A child easily understands the causal relationship between falling down and the pain it creates. Falling is the cause and pain is the effect.
+<!--- The following needs more work --->
+Let's start with a real example. If you fall off your bike, it will cause some pain. The amount of pain depends on speed and the ground you fall onto. Human's intuitively understand the causal relation between falling from a bike and pain. In causal inference we would call falling the Cause and pain the effect.
 One goal of Causal Inference is to mathematically formalize this thinking. 
 
-There are many examples which show that the traditional statistical language, which is based on the notion of independence, is incapable to describe these relationships. A famous saying hereto is association is not causation which is described by Simpson's Paradox. A traditional example is the UC Berkeley gender bias case. In total, the numbers showed that UCB was biased to admit more men. But a closer inspection showed that woman often applied to more competitive degrees where more people were rejected. Thus in total the trend was not that clear. The example shows that a statistical fact doesn't describe the cause and effect of the underlying process. Here, in the language of Causal Inference - more later -, a so called confounding variable (the degree program) conflicted with standard statistics.
+In order to describe, traditional mathematics only has the language of probability theory. But there are many examples which show that traditional probability theory, which is based on the notion of independence, is incapable of describing these relationships. A famous saying hereto is "association is not causation" which is described by Simpson's Paradox. A standard example displaying the phenomenon is the UC Berkeley gender bias case. There UCB analysed the admission numbers which showed that UCB was biased to admit more men. On a closer inspection it came out that woman often applied to more competitive degrees where more people were rejected. Thus in total the trend was not that clear. The example shows that a statistical fact doesn't describe the cause and effect of the underlying process. Here, in the language of Causal Inference - more later -, a so called confounding variable (the degree program) conflicted with standard statistics.
+<!-- TODO write link -->
 
-Now I want to give a tiny intro into the mathematical modelling. Causal Inference assumes operates on so called Strucural Causal Models (SCM), often also called Structural Equation Model (SEM), which generates a causal graph. 
-
-A SCM $C := (S, N)$ governing the random vector $X = (X1, . . . , Xd)$ is a set of structural equations: <br>
-$S_i: X_i \leftarrow fi(Pa(X_i), N_i)$, <br>
-where $Pa(Xi) ⊆ \{X_1, . . . , X_d\} \ \{X_i\}$ are called the parents of Xi, and the $N_i$ are
-independent noise random variables. We say that “$X_i$ causes $X_j$” if $X_i ∈ Pa(X_j)$. <br>
+Now I want to give a tiny intro into the mathematical modelling. Causal Inference assumes operates on so called Strucural Causal Models (SCM), often also called Structural Equation Model (SEM), which generates a causal graph. The following definition is similar to [1]:
+{{% callout note %}}
+A SCM $\mathcal{C} := (S, P_N)$ governing the random vector $X = (X_1, ..., X_d)$ is a set of structural equations: <br>
+$$S_i: X_i \leftarrow fi(Pa(X_i), N_i),i=1, \dots,d$$, where $X_i$ are exogenous variables, $Pa(Xi) ⊆ \{X_1, ..., X_d\} \ \{X_i\}$ are called the parents of $X_i$, and the $N_i$ are
+independent random noise variables. <br>
+We say that “$X_i$ causes $X_j$” if $X_i ∈ Pa(X_j)$. <br>
 We call a graph $G$ a causal graph of $X$ if it is obtained by drawing i) one node for each $X_i$,
 and ii) one edge from $X_i$ to $X_j$ if $X_i ∈ Pa(X_j)$. We assume acyclic causal graphs. <br>
 Definition is taken from [1]. Various abstractions, including cyclic graphs are also possible, e.g. [2].
+{{% /callout %}}
 
 One task is to observe SCM's or causal graphs from observational data.
 Most of the time we assume they are given by human domain knowledge. To answer causal questions humans resort to "What if" questions, e.g. "Would it have been smarter if I had used the bike instead of the car". This is formalized by interventions. Again we take the definition from [1]:
@@ -83,14 +91,37 @@ TODO: compare to primer and schölkopf book.
 
 ## What connections did I observe to NLP?
 
-On the first sight, causal thinking is completely natural to human thinking. We make statistical and causal considerations in most of our arguments.
-#TODO good example
-But when you want to apply the theory to certain problems, often complexity rises to quickly. Most problems in causal inference assume a known causal graph. In language, every conversation can be represented by a different graph. This is an example of the complexity arising.
+As discussed in the beginning, causal thinking is completely natural to human thinking. We make statistical and causal considerations in most of our arguments. 
+But when you want to apply the theory to certain problems, often complexity rises to quickly. Most tools in causal inference assume a known causal graph. In language, every conversation can be represented by a different graph. This is an example of the complexity arising.
 
 There's different ways how Causal Inference interacts with machine learning in general. A good overview is given in  TODO: Schölkopf paper
 
-githu causaltext link
 An idea is to use CI for model explainability. A very nice example is CausaLM 
 
-## What problems do I see?
+## Why is NLP and Causality difficult?
 
+The basic theoretical notion of Causal Inference is the usage of SCM's. So if we now brainstorm how we could use SCM's on text without a particular goal in mind, there might be several strategies:
+
+1) Use the SCM to describe the text itself
+2) Use the SCM to describe the task
+3) Use the SCM to describe inner workings of the model
+ For now, I want to describe why each of these have their difficulties. 
+
+An often spken basis for Causality and NLP is the hypothesis of independent mechanisms, 
+{{< cite "ziegler2019latent" >}}
+meaning that a situation can be described by independent factors. For example, a written letter (e.g. MNIST dataset) can have parameters like thickness, width, color, etc., which can be controlled independently. In NLP, these factors would probably correspond to exactness, complexity, friendliness or others which are very subjective and tough to describe numerically.
+
+While this was rather negative view, people came up many great ideas on how to use causal theory for NLP. See [4] for a comprehensive overview of the field. ALso, it's clear that the intersection of the two fields is still rather unexplored.
+
+- We have to change that
+
+
+## Links:
+
+[1] [Schölkopf et al. Causal Representation learning](https://arxiv.org/pdf/2102.11107.pdf): Good overview of CI and ML, and open questions <br>
+[2] [Brady Neal Causal Inference course](https://www.bradyneal.com/causal-inference-course) <br>
+[3] [The Book of Why](https://en.wikipedia.org/wiki/The_Book_of_Why): Book opening Causal Inference to the general public, authored by Judea Pearl, who is often described as the inventor of Causal Inference (and one of my favorite scientist) <br>
+[4] [Overview causality and NLP Github repo](https://github.com/causaltext/causal-text-papers); including their [overview paper](https://arxiv.org/pdf/2109.00725.pdf)
+
+
+{{< bibliography cited >}}
