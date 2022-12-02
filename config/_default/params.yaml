@@ -156,3 +156,6 @@ cms:
 icon:
   pack:
     ai: true
+marketing:
+  analytics:
+    google_analytics: 'G-2DSPR6GJ3V'
