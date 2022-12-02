@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming | AndSt</title><link>https://andst.github.io/tag/programming/</link><atom:link href="https://andst.github.io/tag/programming/index.xml" rel="self" type="application/rss+xml"/><description>Programming</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 10 Aug 2021 00:00:00 +0000</lastBuildDate><image><url>https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_512x512_fill_lanczos_center_3.png</url><title>Programming</title><link>https://andst.github.io/tag/programming/</link></image><item><title>My Terminal Setup</title><link>https://andst.github.io/post/terminal_setup/</link><pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate><guid>https://andst.github.io/post/terminal_setup/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Within this post I want to talk about my terminal tooling.
+Maybe it is of interest to some of you. Also, maybe someone has some suggestions or cool ideas to improve my setup.
+To me, the terminal is one of my most important development tools.
+Usually I only use PyCharm, Jupyter Notebooks and the Terminal to do my practical work.
+Among others, I use it to configure the system, set up my programming environments, start programs and to handle and view data.&lt;/p>
+&lt;p>You can find my setup on this Github Repo: &lt;a href="https://github.com/AndSt/zsh-config" target="_blank" rel="noopener">https://github.com/AndSt/zsh-config&lt;/a>. With this setup I&amp;rsquo;m able to set up new systems rather quickly. I want to make it compatible with Linux and Mac. Right now I have two scripts, one for each system, installing programs such as VLC, Google Chrome and performing update commands such as apt upgrade. Afterwards I use VCSH combine with myrepos to set up my system. I used &lt;a href="https://pikedom.com/managing-dot-files-with-vcsh-and-myrepo/" target="_blank" rel="noopener">this&lt;/a> guide to distribute the setup in the repo mentioned above to new systems.
+While this works rather quickly, I&amp;rsquo;m still not fully happy with it. Hit me up if you have a better solution to set up new systems.
+I like to keep my home directory tidy, so I use the &lt;a href="https://wiki.archlinux.org/title/XDG_Base_Directory" target="_blank" rel="noopener">XDG Base Directory specification&lt;/a> to structure my home directory. In the Resources chapter, you will find a link to a video showing how to do some directory cleaning.&lt;/p>
+&lt;h2 id="zsh">ZSH&lt;/h2>
+&lt;p>Most importantly, I use ZSH. Using it provided me with a huge productivity boost. These are the plugins which I would recomend:&lt;/p>
+&lt;ul>
+&lt;li>git: Some git info, such as the branch&lt;/li>
+&lt;li>zsh-autosuggestions: Suggests previous commands in light gray&lt;/li>
+&lt;li>virtualenvwrapper: Automatically enter python environments&lt;/li>
+&lt;li>autojump: Learning system to jump to different parts of the system&lt;/li>
+&lt;li>dotenv: If a .env file is present in a directory, it is automatically sourced&lt;/li>
+&lt;li>zsh-syntax-highlighting: Beautifies terminal output&lt;/li>
+&lt;/ul>
+&lt;p>Out there are really a lot of plugins. Check them out and pick together your favourite ones! Find them under &lt;a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;h2 id="python-setup">Python Setup&lt;/h2>
+&lt;p>Since about 2.5 years Python is main programming language. On this note, I want to mention that I&amp;rsquo;m really happy about that fact and enjoy working with it. Previously I was working with less &amp;ldquo;scripty&amp;rdquo; languages such as Java which didn&amp;rsquo;t satisfy me as much.
+So spread the word, Python is awesome.
+Logically, a big part of my setup is built for programming with Python.&lt;/p>
+&lt;p>I use a dedicated Python environment for each project. This helps me to reproduce to other systems and to speeden up development.
+I use virtualenv in combination with &lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank" rel="noopener">virtualenvwrapper&lt;/a> to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.&lt;/p>
+&lt;p>Additionally I built some scripts to work with environments. For instance I built a command called &amp;ldquo;cvenv&amp;rdquo; which creates a new environment and installs some libraries I need in all my projects. Find the shell script &lt;a href="https://github.com/AndSt/zsh-config/blob/master/.config/zsh/scripts/create_virtualenv.sh" target="_blank" rel="noopener">here&lt;/a>&lt;/p>
+&lt;p>Additionally I installed the &lt;a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper" target="_blank" rel="noopener">virtualenvwrapper&lt;/a> ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it when you enter the folder.&lt;/p>
+&lt;h2 id="future-plans">Future Plans&lt;/h2>
+&lt;p>Currently, I aim to optimize two things. But I&amp;rsquo;m still in the &amp;ldquo;What do I want to do and how?&amp;rdquo; phase.
+&lt;br>
+&lt;br>
+&lt;b>Setup time:&lt;/b> At the moment it still takes me one to two hours to set up my system. It&amp;rsquo;s definitely not perfect. My goal would be a a script which identifies the operating systems on it&amp;rsquo;s own and installs my standard setup.
+I know that there&amp;rsquo;s solutions such as Ansible. While I&amp;rsquo;ve not read a lot yet it feels like overengineering to use such sophisticated tool. &lt;br />
+&lt;b>Phone integration:&lt;/b> Currently I use Mac also for private usage. While there&amp;rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.&lt;/p>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;p>In the end I wanna recommend some resources which helped me set up my system.&lt;/p>
+&lt;ul>
+&lt;li>I really enjoy the videos of Luke Smith. For example, in this &lt;a href="https://www.youtube.com/watch?v=yy8RoDSdhIQ&amp;amp;ab_channel=LukeSmith" target="_blank" rel="noopener">video&lt;/a> he shares how he keeps his home directory clean using the XDG Base Directory Specification.&lt;/li>
+&lt;li>&lt;a href="https://github.com/unixorn/awesome-dotfiles" target="_blank" rel="noopener">Awesome Dotfiles:&lt;/a> Another awesome library. If you&amp;rsquo;re interested to know more about Dotfiles, this should be a good entry point to find interesting resources.&lt;/li>
+&lt;/ul></description></item></channel></rss>
