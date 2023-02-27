@@ -5,12 +5,36 @@
     <link>https://andst.github.io/</link>
       <atom:link href="https://andst.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>AndSt</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 10 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 05 May 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_512x512_fill_lanczos_center_3.png</url>
       <title>AndSt</title>
       <link>https://andst.github.io/</link>
     </image>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://andst.github.io/project/projects_copy_to_home_to_include/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://andst.github.io/project/projects_copy_to_home_to_include/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SepLL: Separating Latent Class Labels from Weak Supervision Noise</title>
+      <link>https://andst.github.io/publication/sepll/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://andst.github.io/publication/sepll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WeaNF: Weak Supervision with Normalizing Flows</title>
+      <link>https://andst.github.io/publication/weanf/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://andst.github.io/publication/weanf/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>My Terminal Setup</title>
@@ -19,33 +43,39 @@
       <guid>https://andst.github.io/post/terminal_setup/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;Within this post I want to talk about my terminal tooling.
-For me, the terminal is of my most important tools, probably the most important tool.
-I use it to set up my programming environments, configure everything, start programs and handle and view data.&lt;/p&gt;
-&lt;p&gt;You can find my setup on this Github Repo: &lt;a href=&#34;https://github.com/AndSt/zsh-config&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/AndSt/zsh-config&lt;/a&gt;. I also use this directory to work on remote machine. In that way I can quickly setup new systems. As I want to make it compatible with Linux and Mac I&amp;rsquo;m still not fully happy. Recommendations are welcome! Right now I have two scripts, one for each system, installing programs such as VLC, Google Chrome and performing update commands such as apt upgrade. Afterwards I use VCSH combine with myrepos to set up my system. I used &lt;a href=&#34;https://pikedom.com/managing-dot-files-with-vcsh-and-myrepo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; guide to distribute the setup in the repo mentioned above to new systems.&lt;/p&gt;
-&lt;p&gt;Most importantly I use ZSH. Using it provided me with a huge productivity boost.
-I like to keep my home directory tidy, so I use the &lt;a href=&#34;https://wiki.archlinux.org/title/XDG_Base_Directory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XDG Base Directory specification&lt;/a&gt; to structure my home directory.&lt;/p&gt;
-&lt;h2 id=&#34;python-setup&#34;&gt;Python Setup&lt;/h2&gt;
-&lt;p&gt;Since about 2.5 years Python is main programming language. On this note, I should note that I&amp;rsquo;m really happy and enjoy it to work with this language.
-Logically a big part of my setup is built for programming with Python&lt;/p&gt;
-&lt;p&gt;I use virtualenv in combination with &lt;a href=&#34;https://virtualenvwrapper.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.&lt;/p&gt;
-&lt;p&gt;Additionally I built some scripts to work with environments. For instance I built a command called &amp;ldquo;cvenv&amp;rdquo; which creates a new environment and installs some libraries I need in all my projects.&lt;/p&gt;
-&lt;p&gt;I installed the &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it.&lt;/p&gt;
-&lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
-&lt;p&gt;After googling and adding and removing some, I ended up using these plugins:&lt;/p&gt;
+Maybe it is of interest to some of you. Also, maybe someone has some suggestions or cool ideas to improve my setup.
+To me, the terminal is one of my most important development tools.
+Usually I only use PyCharm, Jupyter Notebooks and the Terminal to do my practical work.
+Among others, I use it to configure the system, set up my programming environments, start programs and to handle and view data.&lt;/p&gt;
+&lt;p&gt;You can find my setup on this Github Repo: &lt;a href=&#34;https://github.com/AndSt/zsh-config&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/AndSt/zsh-config&lt;/a&gt;. With this setup I&amp;rsquo;m able to set up new systems rather quickly. I want to make it compatible with Linux and Mac. Right now I have two scripts, one for each system, installing programs such as VLC, Google Chrome and performing update commands such as apt upgrade. Afterwards I use VCSH combine with myrepos to set up my system. I used &lt;a href=&#34;https://pikedom.com/managing-dot-files-with-vcsh-and-myrepo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; guide to distribute the setup in the repo mentioned above to new systems.
+While this works rather quickly, I&amp;rsquo;m still not fully happy with it. Hit me up if you have a better solution to set up new systems.
+I like to keep my home directory tidy, so I use the &lt;a href=&#34;https://wiki.archlinux.org/title/XDG_Base_Directory&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XDG Base Directory specification&lt;/a&gt; to structure my home directory. In the Resources chapter, you will find a link to a video showing how to do some directory cleaning.&lt;/p&gt;
+&lt;h2 id=&#34;zsh&#34;&gt;ZSH&lt;/h2&gt;
+&lt;p&gt;Most importantly, I use ZSH. Using it provided me with a huge productivity boost. These are the plugins which I would recomend:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;git: Some git visualizations&lt;/li&gt;
+&lt;li&gt;git: Some git info, such as the branch&lt;/li&gt;
 &lt;li&gt;zsh-autosuggestions: Suggests previous commands in light gray&lt;/li&gt;
 &lt;li&gt;virtualenvwrapper: Automatically enter python environments&lt;/li&gt;
 &lt;li&gt;autojump: Learning system to jump to different parts of the system&lt;/li&gt;
 &lt;li&gt;dotenv: If a .env file is present in a directory, it is automatically sourced&lt;/li&gt;
 &lt;li&gt;zsh-syntax-highlighting: Beautifies terminal output&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Out there&amp;rsquo;s really a lot of plugins. Check them out and pick together your favourite ones! Find them under &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Out there are really a lot of plugins. Check them out and pick together your favourite ones! Find them under &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;python-setup&#34;&gt;Python Setup&lt;/h2&gt;
+&lt;p&gt;Since about 2.5 years Python is main programming language. On this note, I want to mention that I&amp;rsquo;m really happy about that fact and enjoy working with it. Previously I was working with less &amp;ldquo;scripty&amp;rdquo; languages such as Java which didn&amp;rsquo;t satisfy me as much.
+So spread the word, Python is awesome.
+Logically, a big part of my setup is built for programming with Python.&lt;/p&gt;
+&lt;p&gt;I use a dedicated Python environment for each project. This helps me to reproduce to other systems and to speeden up development.
+I use virtualenv in combination with &lt;a href=&#34;https://virtualenvwrapper.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.&lt;/p&gt;
+&lt;p&gt;Additionally I built some scripts to work with environments. For instance I built a command called &amp;ldquo;cvenv&amp;rdquo; which creates a new environment and installs some libraries I need in all my projects. Find the shell script &lt;a href=&#34;https://github.com/AndSt/zsh-config/blob/master/.config/zsh/scripts/create_virtualenv.sh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Additionally I installed the &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;virtualenvwrapper&lt;/a&gt; ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it when you enter the folder.&lt;/p&gt;
 &lt;h2 id=&#34;future-plans&#34;&gt;Future Plans&lt;/h2&gt;
-&lt;p&gt;There&amp;rsquo;s multiple ideas I have.&lt;br&gt;
+&lt;p&gt;Currently, I aim to optimize two things. But I&amp;rsquo;m still in the &amp;ldquo;What do I want to do and how?&amp;rdquo; phase.
+&lt;br&gt;
+&lt;br&gt;
 &lt;b&gt;Setup time:&lt;/b&gt; At the moment it still takes me one to two hours to set up my system. It&amp;rsquo;s definitely not perfect. My goal would be a a script which identifies the operating systems on it&amp;rsquo;s own and installs my standard setup.
 I know that there&amp;rsquo;s solutions such as Ansible. While I&amp;rsquo;ve not read a lot yet it feels like overengineering to use such sophisticated tool. &lt;br /&gt;
-&lt;b&gt;Phone integration:&lt;/b&gt; Currently I use Mac for private usage. While there&amp;rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.&lt;/p&gt;
+&lt;b&gt;Phone integration:&lt;/b&gt; Currently I use Mac also for private usage. While there&amp;rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.&lt;/p&gt;
 &lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
 &lt;p&gt;In the end I wanna recommend some resources which helped me set up my system.&lt;/p&gt;
 &lt;ul&gt;
@@ -61,48 +91,6 @@ I know that there&amp;rsquo;s solutions such as Ansible. While I&amp;rsquo;ve no
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://andst.github.io/publication/knodle/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>My dive into Causal Inference and thoughts on the connection to NLP</title>
-      <link>https://andst.github.io/post/causality_nlp_opinion/</link>
-      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://andst.github.io/post/causality_nlp_opinion/</guid>
-      <description>&lt;p&gt;After starting my PhD I aimed to broaden my interests in machine learning.&lt;/p&gt;
-&lt;h2 id=&#34;what-is-causal-inference&#34;&gt;What is Causal Inference?&lt;/h2&gt;
-&lt;p&gt;Within this paragraph I will give a high level view which lacks completeness and any formal correctness . The goal is to give you an intuitive idea how I see the field. Given my machine learning background, my limited exposure to the field, chances are that my introduction is not the best for everyone.
-If you leave this intro with a feeling of some questions Causal Inference aims to answer, I&amp;rsquo;d be really happy 🥳.
-Now let&amp;rsquo;s get down to business.&lt;/p&gt;
-&lt;p&gt;Causal thinking is something very natural to humans. A child easily understands the causal relationship between falling down and the pain it creates. Falling is the cause and pain is the effect.
-One goal of Causal Inference is to mathematically formalize this thinking.&lt;/p&gt;
-&lt;p&gt;There are many examples which show that the traditional statistical language, which is based on the notion of independence, is incapable to describe these relationships. A famous saying hereto is association is not causation which is described by Simpson&amp;rsquo;s Paradox. A traditional example is the UC Berkeley gender bias case. In total, the numbers showed that UCB was biased to admit more men. But a closer inspection showed that woman often applied to more competitive degrees where more people were rejected. Thus in total the trend was not that clear. The example shows that a statistical fact doesn&amp;rsquo;t describe the cause and effect of the underlying process. Here, in the language of Causal Inference - more later -, a so called confounding variable (the degree program) conflicted with standard statistics.&lt;/p&gt;
-&lt;p&gt;Now I want to give a tiny intro into the mathematical modelling. Causal Inference assumes operates on so called Strucural Causal Models (SCM), often also called Structural Equation Model (SEM), which generates a causal graph.&lt;/p&gt;
-&lt;p&gt;A SCM $C := (S, N)$ governing the random vector $X = (X1, . . . , Xd)$ is a set of structural equations: &lt;br&gt;
-$S_i: X_i \leftarrow fi(Pa(X_i), N_i)$, &lt;br&gt;
-where $Pa(Xi) ⊆ {X_1, . . . , X_d} \ {X_i}$ are called the parents of Xi, and the $N_i$ are
-independent noise random variables. We say that “$X_i$ causes $X_j$” if $X_i ∈ Pa(X_j)$. &lt;br&gt;
-We call a graph $G$ a causal graph of $X$ if it is obtained by drawing i) one node for each $X_i$,
-and ii) one edge from $X_i$ to $X_j$ if $X_i ∈ Pa(X_j)$. We assume acyclic causal graphs. &lt;br&gt;
-Definition is taken from [1]. Various abstractions, including cyclic graphs are also possible, e.g. [2].&lt;/p&gt;
-&lt;p&gt;One task is to observe SCM&amp;rsquo;s or causal graphs from observational data.
-Most of the time we assume they are given by human domain knowledge. To answer causal questions humans resort to &amp;ldquo;What if&amp;rdquo; questions, e.g. &amp;ldquo;Would it have been smarter if I had used the bike instead of the car&amp;rdquo;. This is formalized by interventions. Again we take the definition from [1]:&lt;/p&gt;
-&lt;p&gt;Consider a SEM C = (S, N). An intervention $e$ on $C$ consists of replacing one or several of its structural equations to obtain an intervened SEM $C^e=(S^e, N^e)$, with structural equations: &lt;br&gt;
-$S_i^e : X_i \leftarrow f_i^e (Pa^e(X_i^e), N_i^e)$,.&lt;br&gt;
-The variable $X_e$ is intervened if $S_i \neq S_i^e$ or $N_i \neq N_i^e$.&lt;/p&gt;
-&lt;p&gt;A hard intervention would set a value $X_i$ to a specific value, e.g. man or woman. A soft intervention would change the formula. By doing so we can answer &amp;ldquo;What if&amp;rdquo; questions.&lt;/p&gt;
-&lt;p&gt;In the end, I want to talk about Pearl&amp;rsquo;s ladder of Causal inference. I hope this gives some high level insight into the types of questions Causal Inference aims to answer.&lt;/p&gt;
-&lt;h2 id=&#34;how-did-i-learn-it&#34;&gt;How did I learn it?&lt;/h2&gt;
-&lt;p&gt;While I heard about the field and the famous saying &amp;ldquo;Causation is not equal to Correlation&amp;rdquo;, I just started diving into the topic this January. With a good friend we went through the course by Brady Neal (&lt;a href=&#34;https://www.bradyneal.com/causal-inference-course&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link to course&lt;/a&gt;). I really enjoyed learning the theory here. It establishes the philosophical thoughts and basic assumptions on the basis of easy examples. It&amp;rsquo;s important to note that the course doesn&amp;rsquo;t focus on the relation to machine learning but gives a general introduction to the topic. In my view this is necessary to get a comprehensive introduction.&lt;/p&gt;
-&lt;p&gt;TODO: compare to primer and schölkopf book.&lt;/p&gt;
-&lt;h2 id=&#34;what-connections-did-i-observe-to-nlp&#34;&gt;What connections did I observe to NLP?&lt;/h2&gt;
-&lt;p&gt;On the first sight, causal thinking is completely natural to human thinking. We make statistical and causal considerations in most of our arguments.
-#TODO good example
-But when you want to apply the theory to certain problems, often complexity rises to quickly. Most problems in causal inference assume a known causal graph. In language, every conversation can be represented by a different graph. This is an example of the complexity arising.&lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s different ways how Causal Inference interacts with machine learning in general. A good overview is given in  TODO: Schölkopf paper&lt;/p&gt;
-&lt;p&gt;githu causaltext link
-An idea is to use CI for model explainability. A very nice example is CausaLM&lt;/p&gt;
-&lt;h2 id=&#34;what-problems-do-i-see&#34;&gt;What problems do I see?&lt;/h2&gt;
-</description>
     </item>
     
     <item>
@@ -231,19 +219,6 @@ Three
 &lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Another Multi Model Server (AMMS)</title>
-      <link>https://andst.github.io/project/amms/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://andst.github.io/project/amms/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
     </item>
     

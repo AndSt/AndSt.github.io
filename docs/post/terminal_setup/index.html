@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="I want to spend a few words to talk about my terminal as this is my most essential development tool besides PyCharm." />
+  <meta name="description" content="I want to spend a few words to talk about my terminal as this it is one of my most important development tools." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://andst.github.io/post/terminal_setup/" />
@@ -58,7 +58,7 @@
   
   
   
-    <meta name="theme-color" content="#1565c0" />
+    <meta name="theme-color" content="#EF525B" />
   
 
   
@@ -255,8 +255,8 @@
   
     
       
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
     
   
 
@@ -265,10 +265,49 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.f0cf03b20998d63e314819fa4a90c13f.css" />
+  <link rel="stylesheet" href="/css/wowchemy.571b6cede7d1ac814dd0b208de3265d9.css" />
 
   
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DSPR6GJ3V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-2DSPR6GJ3V', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
 
 
   
@@ -311,7 +350,7 @@
   <meta property="og:site_name" content="AndSt" />
   <meta property="og:url" content="https://andst.github.io/post/terminal_setup/" />
   <meta property="og:title" content="My Terminal Setup | AndSt" />
-  <meta property="og:description" content="I want to spend a few words to talk about my terminal as this is my most essential development tool besides PyCharm." /><meta property="og:image" content="https://andst.github.io/post/terminal_setup/featured.png" />
+  <meta property="og:description" content="I want to spend a few words to talk about my terminal as this it is one of my most important development tools." /><meta property="og:image" content="https://andst.github.io/post/terminal_setup/featured.png" />
     <meta property="twitter:image" content="https://andst.github.io/post/terminal_setup/featured.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -368,7 +407,7 @@
       "url": "https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "I want to spend a few words to talk about my terminal as this is my most essential development tool besides PyCharm."
+  "description": "I want to spend a few words to talk about my terminal as this it is one of my most important development tools."
 }
 </script>
 
@@ -481,7 +520,7 @@
 
     
     
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
       <ul class="navbar-nav d-md-inline-flex">
@@ -556,43 +595,6 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/#posts"><span>Posts</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-            
-            
-            
-              
-            
-            
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#projects"><span>Projects</span></a>
         </li>
 
         
@@ -752,7 +754,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -767,7 +769,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/programming/">Programming</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/programming/">Programming</a>, <a href="/category/system/">System</a></span>
   
 
 </div>
@@ -795,33 +797,39 @@
     <div class="article-style">
       <h2 id="overview">Overview</h2>
 <p>Within this post I want to talk about my terminal tooling.
-For me, the terminal is of my most important tools, probably the most important tool.
-I use it to set up my programming environments, configure everything, start programs and handle and view data.</p>
-<p>You can find my setup on this Github Repo: <a href="https://github.com/AndSt/zsh-config" target="_blank" rel="noopener">https://github.com/AndSt/zsh-config</a>. I also use this directory to work on remote machine. In that way I can quickly setup new systems. As I want to make it compatible with Linux and Mac I&rsquo;m still not fully happy. Recommendations are welcome! Right now I have two scripts, one for each system, installing programs such as VLC, Google Chrome and performing update commands such as apt upgrade. Afterwards I use VCSH combine with myrepos to set up my system. I used <a href="https://pikedom.com/managing-dot-files-with-vcsh-and-myrepo/" target="_blank" rel="noopener">this</a> guide to distribute the setup in the repo mentioned above to new systems.</p>
-<p>Most importantly I use ZSH. Using it provided me with a huge productivity boost.
-I like to keep my home directory tidy, so I use the <a href="https://wiki.archlinux.org/title/XDG_Base_Directory" target="_blank" rel="noopener">XDG Base Directory specification</a> to structure my home directory.</p>
-<h2 id="python-setup">Python Setup</h2>
-<p>Since about 2.5 years Python is main programming language. On this note, I should note that I&rsquo;m really happy and enjoy it to work with this language.
-Logically a big part of my setup is built for programming with Python</p>
-<p>I use virtualenv in combination with <a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank" rel="noopener">virtualenvwrapper</a> to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.</p>
-<p>Additionally I built some scripts to work with environments. For instance I built a command called &ldquo;cvenv&rdquo; which creates a new environment and installs some libraries I need in all my projects.</p>
-<p>I installed the <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper" target="_blank" rel="noopener">virtualenvwrapper</a> ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it.</p>
-<h2 id="plugins">Plugins</h2>
-<p>After googling and adding and removing some, I ended up using these plugins:</p>
+Maybe it is of interest to some of you. Also, maybe someone has some suggestions or cool ideas to improve my setup.
+To me, the terminal is one of my most important development tools.
+Usually I only use PyCharm, Jupyter Notebooks and the Terminal to do my practical work.
+Among others, I use it to configure the system, set up my programming environments, start programs and to handle and view data.</p>
+<p>You can find my setup on this Github Repo: <a href="https://github.com/AndSt/zsh-config" target="_blank" rel="noopener">https://github.com/AndSt/zsh-config</a>. With this setup I&rsquo;m able to set up new systems rather quickly. I want to make it compatible with Linux and Mac. Right now I have two scripts, one for each system, installing programs such as VLC, Google Chrome and performing update commands such as apt upgrade. Afterwards I use VCSH combine with myrepos to set up my system. I used <a href="https://pikedom.com/managing-dot-files-with-vcsh-and-myrepo/" target="_blank" rel="noopener">this</a> guide to distribute the setup in the repo mentioned above to new systems.
+While this works rather quickly, I&rsquo;m still not fully happy with it. Hit me up if you have a better solution to set up new systems.
+I like to keep my home directory tidy, so I use the <a href="https://wiki.archlinux.org/title/XDG_Base_Directory" target="_blank" rel="noopener">XDG Base Directory specification</a> to structure my home directory. In the Resources chapter, you will find a link to a video showing how to do some directory cleaning.</p>
+<h2 id="zsh">ZSH</h2>
+<p>Most importantly, I use ZSH. Using it provided me with a huge productivity boost. These are the plugins which I would recomend:</p>
 <ul>
-<li>git: Some git visualizations</li>
+<li>git: Some git info, such as the branch</li>
 <li>zsh-autosuggestions: Suggests previous commands in light gray</li>
 <li>virtualenvwrapper: Automatically enter python environments</li>
 <li>autojump: Learning system to jump to different parts of the system</li>
 <li>dotenv: If a .env file is present in a directory, it is automatically sourced</li>
 <li>zsh-syntax-highlighting: Beautifies terminal output</li>
 </ul>
-<p>Out there&rsquo;s really a lot of plugins. Check them out and pick together your favourite ones! Find them under <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">here</a>.</p>
+<p>Out there are really a lot of plugins. Check them out and pick together your favourite ones! Find them under <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="python-setup">Python Setup</h2>
+<p>Since about 2.5 years Python is main programming language. On this note, I want to mention that I&rsquo;m really happy about that fact and enjoy working with it. Previously I was working with less &ldquo;scripty&rdquo; languages such as Java which didn&rsquo;t satisfy me as much.
+So spread the word, Python is awesome.
+Logically, a big part of my setup is built for programming with Python.</p>
+<p>I use a dedicated Python environment for each project. This helps me to reproduce to other systems and to speeden up development.
+I use virtualenv in combination with <a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank" rel="noopener">virtualenvwrapper</a> to work on different projects. I favour it over other Python environment systems such as Anaconda as it is low level and easier compatible with pip. Surely there are other good choices, but so far it has met all my needs and there is no need to change.</p>
+<p>Additionally I built some scripts to work with environments. For instance I built a command called &ldquo;cvenv&rdquo; which creates a new environment and installs some libraries I need in all my projects. Find the shell script <a href="https://github.com/AndSt/zsh-config/blob/master/.config/zsh/scripts/create_virtualenv.sh" target="_blank" rel="noopener">here</a></p>
+<p>Additionally I installed the <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/virtualenvwrapper" target="_blank" rel="noopener">virtualenvwrapper</a> ZSH plugin. If a project repository is named like an existing environment, the plugin automically enters it when you enter the folder.</p>
 <h2 id="future-plans">Future Plans</h2>
-<p>There&rsquo;s multiple ideas I have.<br>
+<p>Currently, I aim to optimize two things. But I&rsquo;m still in the &ldquo;What do I want to do and how?&rdquo; phase.
+<br>
+<br>
 <b>Setup time:</b> At the moment it still takes me one to two hours to set up my system. It&rsquo;s definitely not perfect. My goal would be a a script which identifies the operating systems on it&rsquo;s own and installs my standard setup.
 I know that there&rsquo;s solutions such as Ansible. While I&rsquo;ve not read a lot yet it feels like overengineering to use such sophisticated tool. <br />
-<b>Phone integration:</b> Currently I use Mac for private usage. While there&rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.</p>
+<b>Phone integration:</b> Currently I use Mac also for private usage. While there&rsquo;s already a plethora of Desktop apps such as WhatsApp, Signal, Spotify etc. I wanna have some cool command line tools. For instance I would be able to move files from / to my phone using the terminal.</p>
 <h2 id="resources">Resources</h2>
 <p>In the end I wanna recommend some resources which helped me set up my system.</p>
 <ul>

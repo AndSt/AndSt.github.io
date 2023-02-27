@@ -20,8 +20,8 @@ bio: My research interests include weak supervision, causal inference and probab
 interests:
 - NLP (in general)
 - Weakly Supervised Learning
-- Causal Inference
-- Contrastive Learning
+- Contrastive Learnings
+- Generative LM's
 
 
 # Education to show in About widget
@@ -75,6 +75,7 @@ email: ""
 highlight_name: false
 ---
 
-HI! I'm Andy, a PhD student at the Digital Text Sciences group lead by Professor Benjamin Roth. The group is located within the data mining chair at the University of Vienna. Within my research I want to investigate how to use available human intuitions and heuristics to guide learning algorithms. In order to achieve that, my current research interests include weakly supervised learning, causal inference and contrastive learning. Beforehand, I spent two years in industry working on NLP tasks. First, as a working student at BMW, applying NLP to multiple automotive use cases, and then at Check24 workin on various information extraction and classification tasks within the financial and insurance domains.
+HI! I'm Andy, a PhD student at the Digital Text Sciences group led by Professor Benjamin Roth. The group is located within the data mining chair at the University of Vienna. Within my research I want to investigate how to use available human intuitions and heuristics to guide learning algorithms. Most recently I move my focus to thinking about how to apply ideas from weak supervision to generative language models.
+Beforehand, I spent two years in industry working on NLP tasks. First, as a working student at BMW, applying NLP to multiple automotive use cases, and then at Check24 working on various information extraction and classification tasks within the financial and insurance domains.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
