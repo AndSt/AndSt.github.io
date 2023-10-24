@@ -1,20 +1,24 @@
 ---
-title: "SepLL: Separating Latent Class Labels from Weak Supervision Noise"
+title: "Towards Enhancing Deep Active Learning with Weak Supervision and Constrained Clustering"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
+- Matthias Aßenmacher
+- Lukas Rauch
+- Jann Goschenhofer
 - admin
-- Vasiliki Kougia
+- Bernd Bischl
 - Benjamin Roth
+- Bernhard Sick
 
 # Author notes (optional)
 #author_notes:
 #- "Equal contribution"
 #- "Equal contribution"
 
-date: "2022-05-05T00:00:00Z"
+date: "2023-09-22T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -27,10 +31,10 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Findings of the Association for Computational Linguistics, EMNLP 2022*
-publication_short: In *EMNLP-2022*
+publication: In *7th International Workshop & Tutorial on Interactive Adaptive Learning, September 22nd, 2023*
+publication_short: In *IAL@ECML-PKDD-23*
 
-abstract: "In the weakly supervised learning paradigm, labeling functions automatically assign heuristic, often noisy, labels to data samples. In this work, we provide a method for learning from weak labels by separating two types of complementary information associated with the labeling functions: information related to the target label and information specific to one labeling function only. Both types of information are reflected to different degrees by all labeled instances. In contrast to previous works that aimed at correcting or removing wrongly labeled instances, we learn a branched deep model that uses all data as-is, but splits the labeling function information in the latent space. Specifically, we propose the end-to-end model SepLL which extends a transformer classifier by introducing a latent space for labeling function specific and task-specific information. The learning signal is only given by the labeling functions matches, no pre-processing or label model is required for our method. Notably, the task prediction is made from the latent layer without any direct task signal. Experiments on Wrench text classification tasks show that our model is competitive with the state-of-the-art, and yields a new best average performance."
+abstract: "Three fields revolving around the question of how to cope with limited amounts of labeled data are Deep Active Learning (DAL), deep Constrained Clustering (CC), and Weakly Supervised Learning (WSL). DAL tackles the problem by adaptively posing the question of which data samples to annotate next in order to achieve the best incremental learning improvement, although it suffers from several limitations that hinder its deployment in practical settings. We point out how CC algorithms and WSL could be employed to overcome these limitations and increase the practical applicability of DAL research. Specifically, we discuss the opportunities to use the class discovery capabilities of CC and the possibility of further reducing human annotation efforts by utilizing WSL. We argue that the practical applicability of DAL algorithms will benefit from employing CC and WSL methods for the learning and labeling process. We inspect the overlaps between the three research areas and identify relevant and exciting research questions at the intersection of these areas."
 
 # Summary. An optional shortened abstract.
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
@@ -57,7 +61,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: '[ArXiv](https://arxiv.org/abs/2204.13409)'
+  caption: '[CEUR](https://ceur-ws.org/Vol-3470/paper7.pdf)'
   focal_point: ""
   preview_only: false
 

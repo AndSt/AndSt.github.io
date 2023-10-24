@@ -11,7 +11,7 @@ role: PhD student in NLP
 # Organizations/Affiliations to show in About widget
 organizations:
 - name: University of Vienna
-  url: https://dm.cs.univie.ac.at/
+  url: https://dm.cs.univie.ac.at/team/person/114424/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include weak supervision, causal inference and probabilistic modelling in NLP.
@@ -19,10 +19,9 @@ bio: My research interests include weak supervision, causal inference and probab
 # Interests to show in About widget
 interests:
 - NLP (in general)
-- Weakly Supervised Learning
-- Contrastive Learnings
-- Generative LM's
-
+- Weak Supervision
+- Generative Agents
+- Multi-Modality
 
 # Education to show in About widget
 education:
@@ -48,18 +47,18 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:andreas.stephan@univie.ac.at'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/andst_link
-#- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  # icon_pack: fas
-  # link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
+  icon_pack: fas
+  link: https://scholar.google.com/citations?user=Z9i3jmgAAAAJ&hl=en
 - icon: github
   icon_pack: fab
   link: https://github.com/AndSt
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/andst/
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/andst_link
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
@@ -75,7 +74,7 @@ email: ""
 highlight_name: false
 ---
 
-HI! I'm Andy, a PhD student at the Digital Text Sciences group led by Professor Benjamin Roth. The group is located within the data mining chair at the University of Vienna. Within my research I want to investigate how to use available human intuitions and heuristics to guide learning algorithms. Most recently I move my focus to thinking about how to apply ideas from weak supervision to generative language models.
+HI! I'm Andy, a PhD student at the Digital Text Sciences group led by Professor Benjamin Roth. The group is located within the data mining group at the University of Vienna. Within my research I want to investigate how to use available human intuitions and heuristics to guide learning algorithms. Most recently, I move my focus to thinking about how to transfer ideas from weak supervision to generative language models.
 Beforehand, I spent two years in industry working on NLP tasks. First, as a working student at BMW, applying NLP to multiple automotive use cases, and then at Check24 working on various information extraction and classification tasks within the financial and insurance domains.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

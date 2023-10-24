@@ -1,20 +1,22 @@
 ---
-title: "SepLL: Separating Latent Class Labels from Weak Supervision Noise"
+title: "Weaker Than You Think: A Critical Look at Weakly Supervised Learning"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
+- Dawei Zhu
+- Xiaoyu Shen
+- Marius Mosbach
 - admin
-- Vasiliki Kougia
-- Benjamin Roth
+- Dietrich Klakow
 
 # Author notes (optional)
 #author_notes:
 #- "Equal contribution"
 #- "Equal contribution"
 
-date: "2022-05-05T00:00:00Z"
+date: "2023-07-14T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -27,10 +29,10 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *Findings of the Association for Computational Linguistics, EMNLP 2022*
-publication_short: In *EMNLP-2022*
+publication: In *Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics, Volume 1 Long Papers*
+publication_short: In *ACL-2023*
 
-abstract: "In the weakly supervised learning paradigm, labeling functions automatically assign heuristic, often noisy, labels to data samples. In this work, we provide a method for learning from weak labels by separating two types of complementary information associated with the labeling functions: information related to the target label and information specific to one labeling function only. Both types of information are reflected to different degrees by all labeled instances. In contrast to previous works that aimed at correcting or removing wrongly labeled instances, we learn a branched deep model that uses all data as-is, but splits the labeling function information in the latent space. Specifically, we propose the end-to-end model SepLL which extends a transformer classifier by introducing a latent space for labeling function specific and task-specific information. The learning signal is only given by the labeling functions matches, no pre-processing or label model is required for our method. Notably, the task prediction is made from the latent layer without any direct task signal. Experiments on Wrench text classification tasks show that our model is competitive with the state-of-the-art, and yields a new best average performance."
+abstract: "Weakly supervised learning is a popular approach for training machine learning models in low-resource settings. Instead of requesting high-quality yet costly human annotations, it allows training models with noisy annotations obtained from various weak sources. Recently, many sophisticated approaches have been proposed for robust training under label noise, reporting impressive results. In this paper, we revisit the setup of these approaches and find that the benefits brought by these approaches are significantly overestimated. Specifically, we find that the success of existing weakly supervised learning approaches heavily relies on the availability of clean validation samples which, as we show, can be leveraged much more efficiently by simply training on them. After using these clean labels in training, the advantages of using these sophisticated approaches are mostly wiped out. This remains true even when reducing the size of the available clean data to just five samples per class, making these approaches impractical. To understand the true value of weakly supervised learning, we thoroughly analyze diverse NLP datasets and tasks to ascertain when and why weakly supervised approaches work. Based on our findings, we provide recommendations for future research."
 
 # Summary. An optional shortened abstract.
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
@@ -57,7 +59,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: '[ArXiv](https://arxiv.org/abs/2204.13409)'
+  caption: '[ArXiv](https://arxiv.org/abs/2305.17442)'
   focal_point: ""
   preview_only: false
 
