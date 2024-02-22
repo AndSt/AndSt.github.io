@@ -1,14 +1,281 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Wowchemy 5.3.0 for Hugo"><meta name=author content="Andreas Stephan"><meta name=description content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum."><link rel=alternate hreflang=en-us href=https://andst.github.io/publication/weaker_than_you_think/><link rel=preconnect href=https://fonts.gstatic.com crossorigin><meta name=theme-color content="#EF525B"><script src=/js/mathjax-config.js></script>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous media=print onload='this.media="all"'><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous media=print onload='this.media="all"'><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload='this.media="all"'><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload='this.media="all"' disabled><script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
-<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media=print onload='this.media="all"'><link rel=stylesheet href=/css/wowchemy.571b6cede7d1ac814dd0b208de3265d9.css><script async src="https://www.googletagmanager.com/gtag/js?id=G-2DSPR6GJ3V"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(e,t){gtag("event","click",{event_category:"outbound",event_label:e,transport_type:"beacon",event_callback:function(){t!=="_blank"&&(document.location=e)}}),console.debug("Outbound link clicked: "+e)}function onClickCallback(e){if(e.target.tagName!=="A"||e.target.host===window.location.host)return;trackOutboundLink(e.target,e.target.getAttribute("target"))}gtag("js",new Date),gtag("config","G-2DSPR6GJ3V",{}),gtag("set",{cookie_flags:"SameSite=None;Secure"}),document.addEventListener("click",onClickCallback,!1)</script><link rel=manifest href=/manifest.webmanifest><link rel=icon type=image/png href=/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_32x32_fill_lanczos_center_3.png><link rel=apple-touch-icon type=image/png href=/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_180x180_fill_lanczos_center_3.png><link rel=canonical href=https://andst.github.io/publication/weaker_than_you_think/><meta property="twitter:card" content="summary_large_image"><meta property="og:site_name" content="AndSt"><meta property="og:url" content="https://andst.github.io/publication/weaker_than_you_think/"><meta property="og:title" content="Weaker Than You Think: A Critical Look at Weakly Supervised Learning | AndSt"><meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum."><meta property="og:image" content="https://andst.github.io/publication/weaker_than_you_think/featured.png"><meta property="twitter:image" content="https://andst.github.io/publication/weaker_than_you_think/featured.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2017-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2023-07-14T00:00:00+00:00"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://andst.github.io/publication/weaker_than_you_think/"},"headline":"Weaker Than You Think: A Critical Look at Weakly Supervised Learning","image":["https://andst.github.io/publication/weaker_than_you_think/featured.png"],"datePublished":"2017-01-01T00:00:00Z","dateModified":"2023-07-14T00:00:00Z","author":{"@type":"Person","name":"Dawei Zhu"},"publisher":{"@type":"Organization","name":"AndSt","logo":{"@type":"ImageObject","url":"https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_192x192_fill_lanczos_center_3.png"}},"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum."}</script><title>Weaker Than You Think: A Critical Look at Weakly Supervised Learning | AndSt</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=da1663992bae6d6769c8688dfd8dd410><script src=/js/wowchemy-init.min.1d309c6b3f55725f8869af2651084961.js></script><aside class=search-modal id=search><div class=container><section class=search-header><div class="row no-gutters justify-content-between mb-3"><div class=col-6><h1>Search</h1></div><div class="col-6 col-search-close"><a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a></div></div><div id=search-box><input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...></div></section><section class=section-search-results><div id=search-hits></div></section></div></aside><div class=page-header><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container-xl><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/>AndSt</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/>AndSt</a></div><div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/#about><span>Home</span></a></li><li class=nav-item><a class=nav-link href=/#posts><span>Posts</span></a></li><li class=nav-item><a class=nav-link href=/#publications><span>Publications</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class=nav-item><a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a></li><li class="nav-item dropdown theme-dropdown"><a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences"><i class="fas fa-moon" aria-hidden=true></i></a><div class=dropdown-menu><a href=# class="dropdown-item js-set-theme-light"><span>Light</span></a>
-<a href=# class="dropdown-item js-set-theme-dark"><span>Dark</span></a>
-<a href=# class="dropdown-item js-set-theme-auto"><span>Automatic</span></a></div></li></ul></div></nav></div><div class=page-body><div class=pub><div class="article-container pt-3"><h1>Weaker Than You Think: A Critical Look at Weakly Supervised Learning</h1><div class=article-metadata><div><span>Dawei Zhu</span>, <span>Xiaoyu Shen</span>, <span>Marius Mosbach</span>, <span>Andreas Stephan</span>, <span>Dietrich Klakow</span></div><span class=article-date>July 2023</span></div><div class="btn-links mb-3"><a class="btn btn-outline-primary btn-page-header" href=/publication/weaker_than_you_think/weaker_than_you_think.pdf target=_blank rel=noopener>PDF</a>
-<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/weaker_than_you_think/cite.bib>Cite</a></div></div><div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:529px><div style=position:relative><img src=/publication/weaker_than_you_think/featured_hu25e82f8ec966104b6bba88f9e9c6d8f2_313545_720x0_resize_lanczos_3.png alt class=featured-image>
-<span class=article-header-caption><a href=https://arxiv.org/abs/2305.17442 target=_blank rel=noopener>ArXiv</a></span></div></div><div class=article-container><h3>Abstract</h3><p class=pub-abstract>Weakly supervised learning is a popular approach for training machine learning models in low-resource settings. Instead of requesting high-quality yet costly human annotations, it allows training models with noisy annotations obtained from various weak sources. Recently, many sophisticated approaches have been proposed for robust training under label noise, reporting impressive results. In this paper, we revisit the setup of these approaches and find that the benefits brought by these approaches are significantly overestimated. Specifically, we find that the success of existing weakly supervised learning approaches heavily relies on the availability of clean validation samples which, as we show, can be leveraged much more efficiently by simply training on them. After using these clean labels in training, the advantages of using these sophisticated approaches are mostly wiped out. This remains true even when reducing the size of the available clean data to just five samples per class, making these approaches impractical. To understand the true value of weakly supervised learning, we thoroughly analyze diverse NLP datasets and tasks to ascertain when and why weakly supervised approaches work. Based on our findings, we provide recommendations for future research.</p><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">Type</div><div class="col-12 col-md-9"><a href=/publication/#1>Conference paper</a></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=row><div class=col-md-1></div><div class=col-md-10><div class=row><div class="col-12 col-md-3 pub-row-heading">Publication</div><div class="col-12 col-md-9">In <em>Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics, Volume 1 Long Papers</em></div></div></div><div class=col-md-1></div></div><div class="d-md-none space-below"></div><div class=space-below></div><div class=article-style></div><div class=share-box aria-hidden=true><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https://andst.github.io/publication/weaker_than_you_think/&amp;text=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https://andst.github.io/publication/weaker_than_you_think/&amp;t=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-facebook><i class="fab fa-facebook"></i></a></li><li><a href="mailto:?subject=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning&amp;body=https://andst.github.io/publication/weaker_than_you_think/" target=_blank rel=noopener class=share-btn-email><i class="fas fa-envelope"></i></a></li><li><a href="https://www.linkedin.com/shareArticle?url=https://andst.github.io/publication/weaker_than_you_think/&amp;title=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-linkedin><i class="fab fa-linkedin-in"></i></a></li><li><a href="whatsapp://send?text=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning%20https://andst.github.io/publication/weaker_than_you_think/" target=_blank rel=noopener class=share-btn-whatsapp><i class="fab fa-whatsapp"></i></a></li><li><a href="https://service.weibo.com/share/share.php?url=https://andst.github.io/publication/weaker_than_you_think/&amp;title=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-weibo><i class="fab fa-weibo"></i></a></li></ul></div><div class="media author-card content-widget-hr"><a href=https://andst.github.io><img class="avatar mr-3 avatar-circle" src=/authors/admin/avatar_hu41d2164c28b67ac95cc8b75efe7c697d_2572784_270x270_fill_q75_lanczos_center.jpg alt="Andreas Stephan"></a><div class=media-body><h5 class=card-title><a href=https://andst.github.io>Andreas Stephan</a></h5><h6 class=card-subtitle>PhD student in NLP</h6><p class=card-text>My research interests include weak supervision, causal inference and probabilistic modelling in NLP.</p><ul class=network-icon aria-hidden=true><li><a href=mailto:andreas.stephan@univie.ac.at><i class="fas fa-envelope"></i></a></li><li><a href="https://scholar.google.com/citations?user=Z9i3jmgAAAAJ&amp;hl=en" target=_blank rel=noopener><i class="fas fa-graduation-cap"></i></a></li><li><a href=https://github.com/AndSt target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li><a href=https://www.linkedin.com/in/andst/ target=_blank rel=noopener><i class="fab fa-linkedin"></i></a></li><li><a href=https://twitter.com/andst_link target=_blank rel=noopener><i class="fab fa-twitter"></i></a></li></ul></div></div></div></div></div><div class=page-footer><div class=container><footer class=site-footer><p class=powered-by>Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.</p></footer></div></div><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>Cite</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code class="tex hljs"></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> Copy</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> Download</a><div id=modal-error></div></div></div></div></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.3.0 for Hugo">
+<meta name=author content="Andreas Stephan">
+<meta name=description content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.">
+<link rel=alternate hreflang=en-us href=https://andst.github.io/publication/weaker_than_you_think/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="#EF525B">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media=print onload="this.media='all'">
+<link rel=stylesheet href=/css/wowchemy.571b6cede7d1ac814dd0b208de3265d9.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DSPR6GJ3V"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','G-2DSPR6GJ3V',{}),gtag('set',{cookie_flags:'SameSite=None;Secure'}),document.addEventListener('click',onClickCallback,!1)</script>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://andst.github.io/publication/weaker_than_you_think/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="AndSt">
+<meta property="og:url" content="https://andst.github.io/publication/weaker_than_you_think/">
+<meta property="og:title" content="Weaker Than You Think: A Critical Look at Weakly Supervised Learning | AndSt">
+<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum."><meta property="og:image" content="https://andst.github.io/publication/weaker_than_you_think/featured.png">
+<meta property="twitter:image" content="https://andst.github.io/publication/weaker_than_you_think/featured.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2017-01-01T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-07-14T00:00:00+00:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://andst.github.io/publication/weaker_than_you_think/"},"headline":"Weaker Than You Think: A Critical Look at Weakly Supervised Learning","image":["https://andst.github.io/publication/weaker_than_you_think/featured.png"],"datePublished":"2017-01-01T00:00:00Z","dateModified":"2023-07-14T00:00:00Z","author":{"@type":"Person","name":"Dawei Zhu"},"publisher":{"@type":"Organization","name":"AndSt","logo":{"@type":"ImageObject","url":"https://andst.github.io/media/icon_huf55df3efd36cb4bdb6539523da3e6974_26772_192x192_fill_lanczos_center_3.png"}},"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum."}</script>
+<title>Weaker Than You Think: A Critical Look at Weakly Supervised Learning | AndSt</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=da1663992bae6d6769c8688dfd8dd410>
+<script src=/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>AndSt</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>AndSt</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#posts><span>Posts</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications><span>Publications</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<div class=pub>
+<div class="article-container pt-3">
+<h1>Weaker Than You Think: A Critical Look at Weakly Supervised Learning</h1>
+<div class=article-metadata>
+<div>
+<span>
+Dawei Zhu</span>, <span>
+Xiaoyu Shen</span>, <span>
+Marius Mosbach</span>, <span class=author-highlighted>
+Andreas Stephan</span>, <span>
+Dietrich Klakow</span>
+</div>
+<span class=article-date>
+July 2023
+</span>
+</div>
+<div class="btn-links mb-3">
+<a class="btn btn-outline-primary btn-page-header" href=/publication/weaker_than_you_think/weaker_than_you_think.pdf target=_blank rel=noopener>
+PDF
+</a>
+<a href=# class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename=/publication/weaker_than_you_think/cite.bib>
+Cite
+</a>
+</div>
+</div>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:529px>
+<div style=position:relative>
+<img src=/publication/weaker_than_you_think/featured_hu25e82f8ec966104b6bba88f9e9c6d8f2_313545_720x0_resize_lanczos_3.png alt class=featured-image>
+<span class=article-header-caption><a href=https://arxiv.org/abs/2305.17442>ArXiv</a></span>
+</div>
+</div>
+<div class=article-container>
+<h3>Abstract</h3>
+<p class=pub-abstract>Weakly supervised learning is a popular approach for training machine learning models in low-resource settings. Instead of requesting high-quality yet costly human annotations, it allows training models with noisy annotations obtained from various weak sources. Recently, many sophisticated approaches have been proposed for robust training under label noise, reporting impressive results. In this paper, we revisit the setup of these approaches and find that the benefits brought by these approaches are significantly overestimated. Specifically, we find that the success of existing weakly supervised learning approaches heavily relies on the availability of clean validation samples which, as we show, can be leveraged much more efficiently by simply training on them. After using these clean labels in training, the advantages of using these sophisticated approaches are mostly wiped out. This remains true even when reducing the size of the available clean data to just five samples per class, making these approaches impractical. To understand the true value of weakly supervised learning, we thoroughly analyze diverse NLP datasets and tasks to ascertain when and why weakly supervised approaches work. Based on our findings, we provide recommendations for future research.</p>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Type</div>
+<div class="col-12 col-md-9">
+<a href=/publication/#1>
+Conference paper
+</a>
+</div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=row>
+<div class=col-md-1></div>
+<div class=col-md-10>
+<div class=row>
+<div class="col-12 col-md-3 pub-row-heading">Publication</div>
+<div class="col-12 col-md-9">In <em>Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics, Volume 1 Long Papers</em></div>
+</div>
+</div>
+<div class=col-md-1></div>
+</div>
+<div class="d-md-none space-below"></div>
+<div class=space-below></div>
+<div class=article-style></div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://andst.github.io/publication/weaker_than_you_think/&text=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://andst.github.io/publication/weaker_than_you_think/&t=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning&body=https://andst.github.io/publication/weaker_than_you_think/" target=_blank rel=noopener class=share-btn-email>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://andst.github.io/publication/weaker_than_you_think/&title=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-linkedin>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning%20https://andst.github.io/publication/weaker_than_you_think/" target=_blank rel=noopener class=share-btn-whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://andst.github.io/publication/weaker_than_you_think/&title=Weaker%20Than%20You%20Think:%20A%20Critical%20Look%20at%20Weakly%20Supervised%20Learning" target=_blank rel=noopener class=share-btn-weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://andst.github.io><img class="avatar mr-3 avatar-circle" src=/authors/admin/avatar_hu41d2164c28b67ac95cc8b75efe7c697d_2572784_270x270_fill_q75_lanczos_center.jpg alt="Andreas Stephan"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://andst.github.io>Andreas Stephan</a></h5>
+<h6 class=card-subtitle>PhD student in NLP</h6>
+<p class=card-text>My research interests include weak supervision, causal inference and probabilistic modelling in NLP.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=mailto:andreas.stephan@univie.ac.at>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=Z9i3jmgAAAAJ&hl=en" target=_blank rel=noopener>
+<i class="fas fa-graduation-cap"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/AndSt target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/andst/ target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/andst_link target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
@@ -24,7 +291,10 @@
             </div>
           </div>
         </div>
-      </script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+      </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
 <script src=/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js></script>
-<script src=/en/js/wowchemy.min.5bb41a68c539a638856544de9689bd9c.js></script></body></html>
+<script src=/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js></script>
+</body>
+</html>
