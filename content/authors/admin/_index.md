@@ -20,8 +20,8 @@ bio: My research interests include weak supervision, causal inference and probab
 interests:
 - NLP (in general)
 - Weak Supervision
-- Generative Agents
-- Multi-Modality
+- Noise 
+- Noise in Multi-Modal systems
 
 # Education to show in About widget
 education:
@@ -71,10 +71,10 @@ social:
 email: ""
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 ---
 
-HI! I'm Andy, a PhD student at the Digital Text Sciences group led by Professor Benjamin Roth. The group is located within the data mining group at the University of Vienna. Within my research I want to investigate how to use available human intuitions and heuristics to guide learning algorithms. Most recently, I move my focus to thinking about how to transfer ideas from weak supervision to generative language models.
-Beforehand, I spent two years in industry working on NLP tasks. First, as a working student at BMW, applying NLP to multiple automotive use cases, and then at Check24 working on various information extraction and classification tasks within the financial and insurance domains.
+HI! I'm Andy, a PhD student at the Digital Text Sciences group led by Professor Benjamin Roth. The group is located within the data mining group at the University of Vienna. Within my research I investigate how we can use multiple noisy / weak signals to support or guide learning algorithms. Instances are labeling functions, i.e. code which labels data, image-2-text models, i.e. incomplete descriptions of images, or multiple LLM generations.
+Beforehand, I spent two years in industry working on applied NLP problems such as information extraction or integration of graphs and text.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
