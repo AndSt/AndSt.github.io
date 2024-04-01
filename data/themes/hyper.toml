@@ -1,0 +1,23 @@
+# Theme metadata
+name = "Minimal"
+
+[light]
+  # Primary
+  primary = "#1565c0"  # A stronger, yet professional blue shade for primary actions
+
+  # Menu
+menu_primary = "rgb(227, 236, 240)"  # Lighter shade of white for clarity
+  menu_text = "#1565c0"  # A deep green for text, adding a funky, yet professional vibe
+  menu_text_active = "#C62828"  # Red for active menu items, adds vibrancy
+  menu_title = "#1565c0"  # Darker shade for titles, enhancing readability
+
+  # Home sections
+  home_section_odd = "#FFFFFF"  # Light grey for a clean, modern look
+  home_section_even = "rgb(233, 233, 233)"  # A touch of blue-grey for variety and sophistication
+
+[dark]
+  # Primary
+  primary = "#29B6F6"  # Brighter blue for primary actions in dark mode, enhancing visibility
+
+  link = "#81D4FA"  # Light blue for links, ensuring they stand out
+  link_hover = "#E1F5FE"  # Very light blue on hover, maintaining visibility and interest

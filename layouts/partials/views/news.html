@@ -1,0 +1,14 @@
+{{ $item := .item }}
+{{ $page := .page }}
+{{ $summary := $item.Params.summary}}
+
+<div class="d-flex align-items-start justify-content-start">
+    <div class="article-metadata" style="margin-top: 4px; margin-bottom: 5px; width:120px">
+        <i class="fa-regular fa-calendar-days"></i>
+        {{ $item.Params.mainpage_date }}
+    </div>
+    <div class="mr-4" style="margin-bottom: 0px;">
+        <p>{{ $item.Params.mainpage_text }}</p>
+    </div>
+    <div class="mr-4"><a href="{{ .Permalink }}">{{ $item.Params.mainpage_readmore }}</a></div>
+</div>

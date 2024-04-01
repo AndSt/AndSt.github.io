@@ -19,7 +19,7 @@ authors:
 #- "Equal contribution"
 #- "Equal contribution"
 
-date: "2024-03-17T00:00:00Z"
+date: "2024-03-18T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -46,12 +46,12 @@ tags: []
 featured: false
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: ArXiv
+  url: https://arxiv.org/abs/2402.02996
 
 url_pdf: ''
-url_code: ''
+url_code: 'https://github.com/AndSt/text_guided_cl'
 url_dataset: ''
 url_poster: ''
 url_project: ''

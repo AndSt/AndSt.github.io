@@ -14,7 +14,7 @@ authors:
 #- "Equal contribution"
 #- "Equal contribution"
 
-date: "2022-05-05T00:00:00Z"
+date: "2022-12-07T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -45,8 +45,8 @@ featured: false
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
-url_code: ''
+url_pdf: 'https://aclanthology.org/2022.findings-emnlp.288.pdf'
+url_code: 'https://github.com/andst/sepll'
 url_dataset: ''
 url_poster: ''
 url_project: ''

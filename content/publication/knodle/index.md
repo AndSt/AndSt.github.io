@@ -6,7 +6,7 @@ title: "Knodle: Modular Weakly Supervised Learning with PyTorch"
 # and it will be replaced with their full name and linked to their profile.
 authors:
 - Anastasiia Sedova
-- Andreas Stephan
+- admin
 - Marina Speranskaya
 - Benjamin Roth
 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | AndSt</title>
+    <link>http://localhost:1313/publication/</link>
+      <atom:link href="http://localhost:1313/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_huee63539d64e9c9b2e160e15ae376b5b4_1551_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>http://localhost:1313/publication/</link>
+    </image>
+    
+    <item>
+      <title>Text-Guided Image Clustering</title>
+      <link>http://localhost:1313/publication/text_4_image_clustering/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/text_4_image_clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Counterfactual Reasoning with Knowledge Graph Embeddings</title>
+      <link>http://localhost:1313/publication/ccould/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/ccould/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seeing through the mess: evolutionary dynamics of lexical polysemy</title>
+      <link>http://localhost:1313/publication/seeing_through_the_mess/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/seeing_through_the_mess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Towards Enhancing Deep Active Learning with Weak Supervision and Constrained Clustering</title>
+      <link>http://localhost:1313/publication/active_constrained_weak/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/active_constrained_weak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weaker Than You Think: A Critical Look at Weakly Supervised Learning</title>
+      <link>http://localhost:1313/publication/weaker_than_you_think/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/weaker_than_you_think/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SepLL: Separating Latent Class Labels from Weak Supervision Noise</title>
+      <link>http://localhost:1313/publication/sepll/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/sepll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WeaNF: Weak Supervision with Normalizing Flows</title>
+      <link>http://localhost:1313/publication/weanf/</link>
+      <pubDate>Thu, 05 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/weanf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Knodle: Modular Weakly Supervised Learning with PyTorch</title>
+      <link>http://localhost:1313/publication/knodle/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/knodle/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
