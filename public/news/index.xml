@@ -5,12 +5,30 @@
     <link>http://localhost:1313/news/</link>
       <atom:link href="http://localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
     <description>News</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_huee63539d64e9c9b2e160e15ae376b5b4_1551_512x512_fill_lanczos_center_3.png</url>
       <title>News</title>
       <link>http://localhost:1313/news/</link>
     </image>
+    
+    <item>
+      <title>I participated as a student volunteer at ICLR 2024</title>
+      <link>http://localhost:1313/news/2024/iclr_participation/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/iclr_participation/</guid>
+      <description>&lt;p&gt;I participated as a student volunteer at ICLR 2024&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Invited talk - Weak Supervision Tutorial at LMU Munich</title>
+      <link>http://localhost:1313/news/2024/invitated_tutorial_statistics/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/invitated_tutorial_statistics/</guid>
+      <description>&lt;p&gt;Invited talk - Weak Supervision Tutorial at LMU Munich&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Two oral presentations at EACL 2024</title>

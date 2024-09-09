@@ -5,12 +5,44 @@
     <link>http://localhost:1313/publication-type/1/</link>
       <atom:link href="http://localhost:1313/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 09 Sep 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_huee63539d64e9c9b2e160e15ae376b5b4_1551_512x512_fill_lanczos_center_3.png</url>
       <title>1</title>
       <link>http://localhost:1313/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>From Calculation to Adjudication: Examining LLM judges on Mathematical Reasoning Tasks</title>
+      <link>http://localhost:1313/publication/llm_judge/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/llm_judge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text-Guided Alternative Image Clustering</title>
+      <link>http://localhost:1313/publication/text_4_alternative_image_clustering/</link>
+      <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/text_4_alternative_image_clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysing zero-shot temporal relation extraction on clinical notes using temporal consistency</title>
+      <link>http://localhost:1313/publication/analyzing_zero_shot/</link>
+      <pubDate>Wed, 07 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/analyzing_zero_shot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Impact of Cluster Centroid and Text Review Embeddings on Recommendation Methods</title>
+      <link>http://localhost:1313/publication/cluster_centroid/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/cluster_centroid/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Text-Guided Image Clustering</title>

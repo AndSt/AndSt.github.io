@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/news/2024/iclr_participation/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/news/2024/invitated_tutorial_statistics/</loc>
+    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:1313/news/2024/eacl_2024_papers/</loc>
     <lastmod>2024-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -47,19 +55,35 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/publication-type/1/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/news/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/publication/llm_judge/</loc>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/publication_types/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/publication/</loc>
-    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/publication/text_4_alternative_image_clustering/</loc>
+    <lastmod>2024-08-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/publication/analyzing_zero_shot/</loc>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/publication/cluster_centroid/</loc>
+    <lastmod>2024-05-13T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/news/</loc>
+    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/publication/text_4_image_clustering/</loc>

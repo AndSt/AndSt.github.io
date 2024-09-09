@@ -13,6 +13,24 @@
     </image>
     
     <item>
+      <title>I participated as a student volunteer at ICLR 2024</title>
+      <link>http://localhost:1313/news/2024/iclr_participation/</link>
+      <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/iclr_participation/</guid>
+      <description>&lt;p&gt;I participated as a student volunteer at ICLR 2024&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Invited talk - Weak Supervision Tutorial at LMU Munich</title>
+      <link>http://localhost:1313/news/2024/invitated_tutorial_statistics/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/invitated_tutorial_statistics/</guid>
+      <description>&lt;p&gt;Invited talk - Weak Supervision Tutorial at LMU Munich&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Two oral presentations at EACL 2024</title>
       <link>http://localhost:1313/news/2024/eacl_2024_papers/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
@@ -114,6 +132,38 @@
     </item>
     
     <item>
+      <title>From Calculation to Adjudication: Examining LLM judges on Mathematical Reasoning Tasks</title>
+      <link>http://localhost:1313/publication/llm_judge/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/llm_judge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text-Guided Alternative Image Clustering</title>
+      <link>http://localhost:1313/publication/text_4_alternative_image_clustering/</link>
+      <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/text_4_alternative_image_clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysing zero-shot temporal relation extraction on clinical notes using temporal consistency</title>
+      <link>http://localhost:1313/publication/analyzing_zero_shot/</link>
+      <pubDate>Wed, 07 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/analyzing_zero_shot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Impact of Cluster Centroid and Text Review Embeddings on Recommendation Methods</title>
+      <link>http://localhost:1313/publication/cluster_centroid/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/cluster_centroid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Text-Guided Image Clustering</title>
       <link>http://localhost:1313/publication/text_4_image_clustering/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
@@ -163,10 +213,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;png&#34; srcset=&#34;
-               /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_cdb6e311e2a1735dbf10e762428f706e.webp 400w,
-               /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_fc9bbb87927669af314bc8ac65d9d90e.webp 760w,
+               /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_5a714abab5f53c70f7c38e19755638d3.webp 400w,
+               /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_6b76da17c04a40aee4c1c633206f8065.webp 760w,
                /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;http://localhost:1313/post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_cdb6e311e2a1735dbf10e762428f706e.webp&#34;
+               src=&#34;http://localhost:1313/post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_5a714abab5f53c70f7c38e19755638d3.webp&#34;
                width=&#34;601&#34;
                height=&#34;203&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -408,7 +458,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-351462897&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-971465283&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -418,7 +468,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-351462897&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-971465283&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
