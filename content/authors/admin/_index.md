@@ -84,7 +84,8 @@ highlight_name: true
 
 
 Hey! My name is Andy, and I am currently pursuing a PhD with the Digital Text Sciences group under the leadership of [Professor Benjamin Roth](https://benjaminroth.net/) at the University of Vienna. The group is part of the larger [Research Group Data Mining and Machine Learning](https://dm.cs.univie.ac.at/). 
-My research focuses on leveraging various noisy or weak signals to enhance or direct learning algorithms. This includes working with labeling functions—code that annotates data, image-to-text models providing imperfect descriptions of images, and outputs from multiple large language models (LLMs).
 Prior to my academic engagement, I spent two years in the industry, tackling applied natural language processing (NLP) challenges, including information extraction and the integration of graphs with textual data.
+My research focuses on leveraging various noisy or weak signals to enhance or direct learning algorithms. This includes working with labeling functions—code that annotates data, image-to-text models providing imperfect descriptions of images, and outputs from multiple large language models (LLMs).
+
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.

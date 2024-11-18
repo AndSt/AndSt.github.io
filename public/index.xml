@@ -13,6 +13,24 @@
     </image>
     
     <item>
+      <title>Invited talk at CIDAS University of Göttingen</title>
+      <link>http://localhost:1313/news/2024/uni_goettingen/</link>
+      <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/uni_goettingen/</guid>
+      <description>&lt;p&gt;Invited talk at &lt;a href=&#34;https://www.uni-goettingen.de/de/19691.html?cid=12483103&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Campus-Institut Data Science (CIDAS)&lt;/a&gt; at the University of Göttingen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Invited talk at the Vienna Deep Learning Meetup</title>
+      <link>http://localhost:1313/news/2024/vienna_deep_learning/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/vienna_deep_learning/</guid>
+      <description>&lt;p&gt;I gave a talk at the &lt;a href=&#34;https://www.meetup.com/de-DE/vienna-deep-learning-meetup/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vienna Deep Learning Meetup&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>I participated as a student volunteer at ICLR 2024</title>
       <link>http://localhost:1313/news/2024/iclr_participation/</link>
       <pubDate>Tue, 07 May 2024 00:00:00 +0000</pubDate>
@@ -458,7 +476,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-971465283&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-687451239&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -468,7 +486,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-971465283&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-687451239&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

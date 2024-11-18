@@ -5,12 +5,30 @@
     <link>http://localhost:1313/news/</link>
       <atom:link href="http://localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
     <description>News</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 07 May 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 24 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_huee63539d64e9c9b2e160e15ae376b5b4_1551_512x512_fill_lanczos_center_3.png</url>
       <title>News</title>
       <link>http://localhost:1313/news/</link>
     </image>
+    
+    <item>
+      <title>Invited talk at CIDAS University of Göttingen</title>
+      <link>http://localhost:1313/news/2024/uni_goettingen/</link>
+      <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/uni_goettingen/</guid>
+      <description>&lt;p&gt;Invited talk at &lt;a href=&#34;https://www.uni-goettingen.de/de/19691.html?cid=12483103&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Campus-Institut Data Science (CIDAS)&lt;/a&gt; at the University of Göttingen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Invited talk at the Vienna Deep Learning Meetup</title>
+      <link>http://localhost:1313/news/2024/vienna_deep_learning/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/news/2024/vienna_deep_learning/</guid>
+      <description>&lt;p&gt;I gave a talk at the &lt;a href=&#34;https://www.meetup.com/de-DE/vienna-deep-learning-meetup/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vienna Deep Learning Meetup&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>I participated as a student volunteer at ICLR 2024</title>

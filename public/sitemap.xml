@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/news/2024/vienna_deep_learning/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:1313/news/2024/iclr_participation/</loc>
     <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -54,6 +58,10 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>http://localhost:1313/news/</loc>
+    <lastmod>2024-10-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:1313/publication-type/1/</loc>
     <lastmod>2024-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -80,10 +88,6 @@
   </url><url>
     <loc>http://localhost:1313/publication/cluster_centroid/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/news/</loc>
-    <lastmod>2024-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/publication/text_4_image_clustering/</loc>
